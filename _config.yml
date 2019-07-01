@@ -1,1 +1,5 @@
-theme: jekyll-theme-minimal
+title: 株式会社ZUMEN
+logo: /assets/img/logo.png
+description: zumen-co-jp
+show_downloads: false
+google_analytics:
