@@ -7,7 +7,7 @@ title: 会社概要
 <div class="company">
   <h1><i class="fas fa-building"></i> 事業内容</h1>
   <ol>
-    <li>建設プロジェクト効率化のためのインターネットサービスの開発・運営</li>
+    <li>建設プロジェクト効率化のためのクラウドサービスの開発・運営</li>
     <li>国内建設業界関係者向けの情報サイトの企画・運営</li>
   </ol>
   <h1><i class="fas fa-building"></i> 会社概要</h1>
@@ -15,7 +15,7 @@ title: 会社概要
     <dt class="col-sm-4">会社名</dt>
     <dd class="col-sm-8">株式会社ZUMEN</dd>
     <dt class="col-sm-4">設立</dt>
-    <dd class="col-sm-8">令和元年7月2日</dd>
+    <dd class="col-sm-8">令和元年7月26日</dd>
     <dt class="col-sm-4">役員</dt>
     <dd class="col-sm-8">
       代表取締役　二上　祥<br>
