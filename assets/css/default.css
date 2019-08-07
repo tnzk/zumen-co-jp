@@ -19,9 +19,7 @@ ol,ul{
 .mt-15{
   margin-top: 1.5rem;
 }
-/* .mt-15 > div{
-  margin:1.5rem auto;
- } */
+
 p,ol,ul{
   font-size: 1.5rem;
   color:#666;
@@ -182,9 +180,11 @@ background-position: 50% 30%;
 	z-index: 999;
 }
 #top-head.sub{
+  background-color: #fff;
+  padding-bottom: 5px;
 }
 #top-head.sub + *{
-  margin-top:55px;
+  margin-top:61px;
 }
 #top-head a,
 #top-head {
@@ -202,6 +202,7 @@ background-position: 50% 30%;
 #top-head .logo {
 	float: left;
 	font-size: 36px;
+  margin-bottom: 6px;
 }
 #global-nav ul {
 	list-style: none;
@@ -225,18 +226,18 @@ background-position: 50% 30%;
 	display: block;
 	width: 100%;
 	height: 2px;
-	bottom: -10px;
+	bottom: -6px;
 	transition: all 0.2s ease;
 	-webkit-transition: all 0.2s ease;
 	-moz-transition: all 0.2s ease;
 }
 #global-nav ul li:hover:after {
 	background: #fff;
-	bottom: -10px;
+	bottom: -5px;
 }
 #global-nav.sub ul li:hover:after {
 	background: #000;
-	bottom: -10px;
+	bottom: -5px;
 }
 
 /* Fixed */
@@ -244,8 +245,8 @@ background-position: 50% 30%;
 	margin-top: 0;
 	top: 0;
 	position: fixed;
-	padding-top: 10px;
-	height: 55px;
+	padding-top: 14px;
+	height: 56px;
 	background: #fff;
 	background: rgba(255,255,255,.9);
 	transition: top 0.4s ease-in;
@@ -263,11 +264,11 @@ background-position: 50% 30%;
 
 /* Fixed Btn Hover */
 #top-head.fixed #global-nav ul li:after {
-	bottom: -10px;
+	bottom: -5px;
 }
 #top-head.fixed #global-nav ul li:hover:after {/*PCで付いてくるナビのリンク下線エフェクト*/
 	background: #000;
-	bottom: -10px;
+	bottom: -5px;
 }
 /* Toggle Button */
 #nav-toggle {
@@ -353,7 +354,7 @@ background-position: 50% 30%;
 	#top-head .logo{
 		position: absolute;
 		left: 13px;
-		top: 13px;
+		top: 18px;
 		color: #a4e9d6;
 		font-size: 26px;
 	}
@@ -474,12 +475,17 @@ dd {
   background-color: #f5f5f5;
 }
 .nav-horizontal {
-  background-color: #666;
+  /* background-color: #666; */
+  background-color: #fff;
   overflow: hidden;
-  height: 2.8em;
+  padding-top:3px;
+  height: 2.9em;
   width: 100%;
   font-weight: bold;
-}
+  box-shadow: 0 8px 3px -3px rgba(0, 0, 0, 0.03),
+              0 8px 4px -4px rgba(0, 0, 0, 0.03) inset;
+
+  }
 .nav-horizontal .mask {
   height: 5em;
   max-width: 1010px;
@@ -491,21 +497,24 @@ dd {
   display: inline-table;
   margin: 0 auto;
   max-width: 100%;
+  border-collapse: separate;
+  border-spacing: 9px 0;
 }
 .nav-horizontal .list li {
   display: table-cell;
   white-space: nowrap;
+  min-width: 48px;
 }
 .nav-horizontal .list a {
   display: block;
   padding: 0 1em;
   text-decoration: none;
-  color: #fff;
+  /* color: #fff; */
+  color:#666;
   height: 3em;
   line-height: 3;
 }
 .nav-horizontal .list a:hover {
-  color: #666;
-  border-bottom: 2px solid #000;
-  background-color: #f9f9f9;
+  border-bottom: 4px solid #79e2cf;
+  background-color: #f5f5f5;
 }
