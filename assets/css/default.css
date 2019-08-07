@@ -2,7 +2,7 @@
 @font-face { font-family: "Yu Gothic M"; src: local("Yu Gothic Bold"); font-weight: bold; }
 html{
   font-size: 62.5%;
-  font-family: 'Fjalla One',-apple-system, BlinkMacSystemFont, "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'ABeeZee',-apple-system, BlinkMacSystemFont, "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN W3", HiraKakuProN-W3, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
@@ -76,6 +76,13 @@ img{
   height: 3em;
 }
 
+.coltest{
+  max-width: 100%;
+  height:60px;
+  padding-top:-1em;
+  margin-top:-1em;
+  overflow: hidden;
+}
 .coltest.col-12{
   background-color:#ffdfe3;
 }.coltest.col-sm-12{
@@ -170,13 +177,23 @@ background-position: 50% 30%;
 	position: absolute;
 	width: 100%;
 	margin: 100px auto 0;
-	padding: 30px 0 0;
+	padding: 1em 0 0;
 	line-height: 1;
 	z-index: 999;
+}
+#top-head.sub{
+}
+#top-head.sub + *{
+  margin-top:55px;
 }
 #top-head a,
 #top-head {
 	color: #fff;
+	text-decoration: none;
+}
+#top-head.sub a,
+#top-head.sub {
+	color: #000;
 	text-decoration: none;
 }
 #top-head .inner {
@@ -215,7 +232,11 @@ background-position: 50% 30%;
 }
 #global-nav ul li:hover:after {
 	background: #fff;
-	bottom: -15px;
+	bottom: -10px;
+}
+#global-nav.sub ul li:hover:after {
+	background: #000;
+	bottom: -10px;
 }
 
 /* Fixed */
@@ -227,9 +248,9 @@ background-position: 50% 30%;
 	height: 55px;
 	background: #fff;
 	background: rgba(255,255,255,.9);
-	transition: top 0.65s ease-in;
-	-webkit-transition: top 0.65s ease-in;
-	-moz-transition: top 0.65s ease-in;
+	transition: top 0.4s ease-in;
+	-webkit-transition: top 0.4s ease-in;
+	-moz-transition: top 0.4s ease-in;
 }
 #top-head.fixed .logo { /*PCで付いてくるナビのロゴ文字*/
 	font-size: 24px;
@@ -245,8 +266,8 @@ background-position: 50% 30%;
 	bottom: -10px;
 }
 #top-head.fixed #global-nav ul li:hover:after {/*PCで付いてくるナビのリンク下線エフェクト*/
-	background: #a4e9d6;
-	bottom: -15px;
+	background: #000;
+	bottom: -10px;
 }
 /* Toggle Button */
 #nav-toggle {
@@ -322,32 +343,32 @@ background-position: 50% 30%;
 	}
 
 	#mobile-head {
-		background: rgba(255,255,255,1);
+		background: rgba(255,255,255,0.95);
 		width: 100%;
 		height: 56px;
 		z-index: 999;
 		position: relative;
 	}
 	#top-head.fixed .logo,
-	#top-head .logo {
+	#top-head .logo{
 		position: absolute;
 		left: 13px;
 		top: 13px;
 		color: #a4e9d6;
-    /* background: -webkit-linear-gradient(0deg, #00e2be, #ffdd28);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
 		font-size: 26px;
 	}
+	#top-head .logo a{
+    color: #000;
+  }
 
 	#global-nav {
 		position: absolute;
 		/* 開いてないときは画面外に配置 */
 		top: -500px;
-		background: rgba(255,255,255,.8);
+		background: rgba(255,255,255,.95);
 		width: 100%;
 		text-align: center;
-		padding: 10px 0;
+		padding: .5rem 0;
 		-webkit-transition: .5s ease-in-out;
 		-moz-transition: .5s ease-in-out;
 		transition: .5s ease-in-out;
@@ -357,7 +378,7 @@ background-position: 50% 30%;
 		position: static;
 		right: 0;
 		bottom: 0;
-		font-size: 11px;
+		font-size: 1.2rem;
 	}
 	#global-nav ul li {
 		float: none;

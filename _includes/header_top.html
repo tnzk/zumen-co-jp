@@ -1,0 +1,50 @@
+<!-- ヘッダー1 -->
+<script>
+  (function($) {
+    $(function() {
+      var $header = $('#top-head');
+      // Nav Fixed
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+          $header.addClass('fixed');
+        } else {
+          $header.removeClass('fixed');
+        }
+      });
+      // Nav Toggle Button
+      $('#nav-toggle').click(function() {
+        $header.toggleClass('open');
+      });
+    });
+  })(jQuery);
+</script>
+</head>
+<body>
+<header id="top-head" class="container-fluid">
+  <div class="inner">
+    <div id="mobile-head">
+      <h1 class="logo"><a href="/">ZUMEN</a></h1>
+      <div id="nav-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <nav id="global-nav">
+      <ul>
+        <li><a href="about.html">COMPANY</a></li>
+        <!-- <li><a href="#">POSTS</a></li>
+        <li><a href="#">CONTACT</a></li> -->
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="main-visual" class="container-fluid">
+  <div class="row">
+    <p class="col-lg col-xl"></p>
+    <p id="top-head__text" class="col-sm-12 col-lg-11 col-xl-10"><span class="bd">建築</span>×<span class="bd">IT</span>な具合に、<br>いい感じの<span class="bg">コピー</span>を<br>書いてもらう。</p>
+  </div>
+</div>
+<!-- //ヘッダー1 -->

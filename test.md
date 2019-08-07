@@ -1,8 +1,14 @@
 ---
 # YAML Front Matter
-layout: default
-title: test
+layout: sub
+title: testテスト試験てすと123abc
 ---
+
+
+
+{% for post in site.posts %}
+- [{{post.title}}]({{post.url}})
+{% endfor %}
 
 # h1見出しあいうえカキクケabc09876
 
@@ -96,10 +102,10 @@ title: test
 {% endhighlight %}
 
 
-![poyo](/poyo.png)
+![poyo](/assets/img/poyo.png)
 
-{% for post in site.posts %}
-- [{{post.title}}]({{post.url}})
-{% endfor %}
+</div> <div class="row">
+
 
 こんにちは。
+</div></div>
