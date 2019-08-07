@@ -494,6 +494,7 @@ dd {
 }
 .nav-horizontal .list li {
   display: table-cell;
+  white-space: nowrap;
 }
 .nav-horizontal .list a {
   display: block;
