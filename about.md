@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ぽよよ？
+title: about
 ---
 # about
 this page is about my project.
