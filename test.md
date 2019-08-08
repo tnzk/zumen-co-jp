@@ -4,20 +4,43 @@ layout: sub
 title: testテスト試験てすと123abc
 ---
 
+<div class="row">
+  <div class="col-12">
+# ※これはテスト.md(sub召喚)です。
 
+↓テスト
 
+<h1>最初の段落呼び出し</h1>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p>{{ post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>
+↑テスト
+
+<h1>outline呼び出し</h1>
+
+<ul>
 {% for post in site.posts %}
-- [{{post.title}}]({{post.url}})
+<li>
+<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<p>{{post.outline}}</p>
+</li>
 {% endfor %}
+</ul>
+
 
 # h1見出しあいうえカキクケabc09876
 
 見出しのしたのテキスト
 
-* 見出しのしたのリスト
-* 見出しのしたのリスト
-* 見出しのしたのリスト
-
+-   見出しのしたのリスト
+-   見出しのしたのリスト
+-   見出しのしたのリスト
 
 {% highlight css linenos %}
 .sample-img {
@@ -25,15 +48,13 @@ title: testテスト試験てすと123abc
 }
 {% endhighlight %}
 
-
 ## h2見出しあいうえカキクケabc09876
 
 見出しのしたのテキスト
 
-* 見出しのしたのリスト
-* 見出しのしたのリスト
-* 見出しのしたのリスト
-
+-   見出しのしたのリスト
+-   見出しのしたのリスト
+-   見出しのしたのリスト
 
 {% highlight css linenos %}
 .sample-img {
@@ -45,10 +66,9 @@ title: testテスト試験てすと123abc
 
 見出しのしたのテキスト
 
-* 見出しのしたのリスト
-* 見出しのしたのリスト
-* 見出しのしたのリスト
-
+-   見出しのしたのリスト
+-   見出しのしたのリスト
+-   見出しのしたのリスト
 
 {% highlight css linenos %}
 .sample-img {
@@ -60,10 +80,9 @@ title: testテスト試験てすと123abc
 
 見出しのしたのテキスト
 
-* 見出しのしたのリスト
-* 見出しのしたのリスト
-* 見出しのしたのリスト
-
+-   見出しのしたのリスト
+-   見出しのしたのリスト
+-   見出しのしたのリスト
 
 {% highlight css linenos %}
 .sample-img {
@@ -75,10 +94,9 @@ title: testテスト試験てすと123abc
 
 見出しのしたのテキスト
 
-* 見出しのしたのリスト
-* 見出しのしたのリスト
-* 見出しのしたのリスト
-
+-   見出しのしたのリスト
+-   見出しのしたのリスト
+-   見出しのしたのリスト
 
 {% highlight css linenos %}
 .sample-img {
@@ -90,10 +108,9 @@ title: testテスト試験てすと123abc
 
 見出しのしたのテキスト
 
-* 見出しのしたのリスト
-* 見出しのしたのリスト
-* 見出しのしたのリスト
-
+-   見出しのしたのリスト
+-   見出しのしたのリスト
+-   見出しのしたのリスト
 
 {% highlight css linenos %}
 .sample-img {
@@ -101,9 +118,8 @@ title: testテスト試験てすと123abc
 }
 {% endhighlight %}
 
-
 ![poyo](/assets/img/poyo.png)
 
-
-
 こんにちは。
+
+</div></div>

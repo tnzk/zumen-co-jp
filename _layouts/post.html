@@ -1,8 +1,39 @@
 ---
-layout: default
+layout: sub
 ---
-<h1>{{page.title}}</h1>
-{{ page.content }}
-{{ post.excerpt }}
+<div class="row no-gutters blog-box">
+  <div class="col-12">
 
-<p>written by {{page.author}}</p>
+    <div class="blog-header">
+      <p>
+        <span class="blog-header__categories">
+          <a href="{{ site.url }}/test.html">{{ page.categories }}</a>
+        </span>
+        <span class="blog-header__postdate">
+          {{ page.date | date: "%Y-%m-%d" }}
+        </span>
+      </p>
+      <h1>{{ page.title }}</h1>
+    </div>
+
+    <div class="row">
+
+      <div class="col-12 col-sm-8 col-md-8 blog-box__main">
+        {{ page.content }}
+
+        - {{ page.author }}
+        {{ page.tags }}
+      </div>
+
+      <div class="col-sm-4 col-md-4 d-none d-sm-block blog-box__sub mt-15">
+        <img src="/assets/img/poyo.png" alt="">
+      </div>
+
+
+    </div>
+
+  </div>
+</div>
+
+---
+{% include grid-test.html %}

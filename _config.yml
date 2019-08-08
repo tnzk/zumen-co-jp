@@ -5,3 +5,5 @@ show_downloads: false
 google_analytics:
 encoding: utf-8
 highlighter: rouge
+plugins: [jekyll-lunr-js-search]
+image: /assets/img/sample.jpg
