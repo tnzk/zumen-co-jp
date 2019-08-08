@@ -4,12 +4,12 @@ layout: default
 title: 建設プロジェクト効率化のためのクラウドサービスの開発・運営
 ---
 
-
-
 <!-- 左カラム -->
+
 <div class="col d-none d-md-block col-md-3 subcol-left">
 
   <!-- 左カラム中身 -->
+
   <div class="row mt-15">
 
     <!-- カードC 画像-タイトル -->
@@ -36,25 +36,27 @@ title: 建設プロジェクト効率化のためのクラウドサービスの�
       </p>
     </div>
 
-
   </div>
-
 
 </div>
 
 <!-- メインカラム -->
+
 <div class="col-12 col-sm-7 col-md-5 maincol">
 
   <!-- メインカラム中身 -->
+
   <div class="row">
 
   <!-- カードA 画像-タイトル-導入分 -->
+
   {% for post in site.posts %}
-<a href="{{ post.url }}">
+
   <div class="pickup article-card col-12">
     <p class="article-card__tags">
-      <span>{{ post.categories }}</span>
+      <a class="inlink" href="">{{ post.categories }}</a>
     </p>
+    <a href="{{ post.url }}">
     <img src="{{ post.image }}" alt="">
     <p class="article-card__title">
       {{ post.title }}
@@ -62,16 +64,12 @@ title: 建設プロジェクト効率化のためのクラウドサービスの�
     <p class="article-card__info">
       {{ post.outline }}
     </p>
+    </a>
   </div>
-</a>
   {% endfor %}
 
-
-
-
-
-
   <!-- カードA 画像-タイトル-導入分 -->
+
   <!-- <div class="pickup article-card col-12">
     <p class="article-card__tags">
       <span>AI</span>
@@ -159,6 +157,7 @@ title: 建設プロジェクト効率化のためのクラウドサービスの�
 <!-- //メインカラム 終了-->
 
 <!-- 右カラム -->
+
 <div class="col-4 col-sm-5 col-md-4 d-none d-sm-block subcol-right">
   <!-- 右カラム中身 -->
   <div class="row mt-15">
@@ -224,7 +223,6 @@ title: 建設プロジェクト効率化のためのクラウドサービスの�
         <blockquote cite="https://www.facebook.com/5thfloorinc/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/5thfloorinc/">フィフス・フロア株式会社</a></blockquote>
       </div>
     </div>
-
 
   </div>
 
