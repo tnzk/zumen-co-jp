@@ -3,7 +3,6 @@ layout: sub
 ---
 <div class="row no-gutters blog-box">
   <div class="col-12">
-
     <div class="blog-header">
       <div class="cate-tag-date">
         <span class="blog-header__categories">
@@ -15,74 +14,19 @@ layout: sub
       </div>
       <h1>{{ page.title }}</h1>
     </div>
-
     <div class="row">
-
       <div class="col-12 col-sm-8 col-md-8 blog-box__main">
         {{ page.content }}
-
         <div class="author-share">
-          <p>authorする：{{ page.author }}</p>
+           <p>authorする：{{ page.author }}</p>
           <p>タグする：{{ page.tags }}</p>
         </div>
-
       </div>
-
       <div class="col-sm-4 col-md-4 d-none d-sm-block blog-box__sub">
-        <img src="/assets/img/poyo.png" alt="">
-        <div class="col-12">
-          <h3>注目記事</h3>
-        </div>
-
-        <!-- カードD 画像/タイトル -->
-        <div class="article-card col-12">
-          <div class="row no-gutters">
-            <div class="col rank-img__thump">
-              <img src="/assets/img/sample2.jpg" alt="">
-            </div>
-            <div class="col-7">
-              <p class="article-card__title">
-                ピックアップタイプじゃないノーマルなarticleカードだよ。
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- カードD 画像/タイトル -->
-        <div class="article-card col-12">
-          <div class="row no-gutters">
-            <div class="col rank-img__thump">
-              <img src="/assets/img/sample3.jpg" alt="">
-            </div>
-            <div class="col-7">
-              <p class="article-card__title">
-                ピックアップタイプじゃないノーマルなarticleカードだよ。
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- カードD 画像/タイトル -->
-        <div class="article-card col-12 border-none">
-          <div class="row no-gutters">
-            <div class="col rank-img__thump">
-              <img src="/assets/img/sample4.jpg" alt="">
-            </div>
-            <div class="col-7">
-              <p class="article-card__title">
-                ピックアップタイプじゃないノーマルなarticleカードだよ。
-              </p>
-            </div>
-          </div>
-        </div>
-
+        {% include pr-pu.html %}
+        {% include col-rank.html %}
       </div>
-
-
     </div>
-
   </div>
 </div>
-
----
 {% include grid-test.html %}
