@@ -1,15 +1,13 @@
 <nav class="nav-horizontal">
   <div class="mask">
     <ul class="list">
-      <li><a href="#">記事カテゴリ名を入れる</a></li>
-      <li><a href="#">IT</a></li>
-      <li><a href="#">loT</a></li>
-      <li><a href="#">AI</a></li>
-      <li><a href="#">VR</a></li>
-      <li><a href="#">BIM</a></li>
-      <li><a href="#">abc123ABC</a></li>
-      <li><a href="#">カタカナ</a></li>
-      <li><a href="#">日本語</a></li>
+      {% for post in site.posts %}
+      <li>
+        <a href="#">
+          {{ post.categories }}
+        </a>
+      </li>
+      {% endfor %}
     </ul>
   </div>
 </nav>
