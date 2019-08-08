@@ -658,7 +658,7 @@ dd {
   color: #333333;
 }
 
-.blog-box__main>* {
+.blog-box__main > * {
   box-sizing: border-box;
   margin: auto 1.5rem;
 }
