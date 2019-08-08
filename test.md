@@ -9,7 +9,20 @@ title: testテスト試験てすと123abc
 # ※これはテスト.md(sub召喚)です。
 
 ↓テスト
-
+<ul>
+  {% for post in site.posts %}
+    <li>
+    post.image:::{{ post.image }}<br>
+    post.url:::{{ post.url }}<br>
+    post.title:::{{ post.title }}<br>
+    post.excerpt:::{{ post.excerpt }}<br>
+    post.outline:::{{ post.outline }}<br>
+    post.categories:::{{ post.categories }}<br>
+    page.image:::{{ page.image }}<br>
+    </li>
+  {% endfor %}
+</ul>
+↑テスト
 <h1>最初の段落呼び出し</h1>
 
 <ul>

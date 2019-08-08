@@ -48,24 +48,47 @@ title: 建設プロジェクト効率化のためのクラウドサービスの�
   <!-- メインカラム中身 -->
   <div class="row">
 
-    <!-- カードA 画像-タイトル-導入分 -->
-    <div class="pickup article-card col-12">
-      <p class="article-card__tags">
-        <span>AI</span>
-        <span>loT</span>
-      </p>
-      <img src="/assets/img/sample4.jpg" alt="">
-      <p class="article-card__title">
-        メロスは激怒した。必ず、かの邪智暴虐の王を除かなければならぬと決意した。
-      </p>
-      <p class="article-card__info">
-        メロスには政治がわからぬ。メロスは、村の牧人である。笛を吹き、羊と遊んで暮して来た。けれども邪悪に対しては、人一倍に敏感であった。
+  <!-- カードA 画像-タイトル-導入分 -->
+  {% for post in site.posts %}
+<a href="{{ post.url }}">
+  <div class="pickup article-card col-12">
+    <p class="article-card__tags">
+      <span>{{ post.categories }}</span>
+    </p>
+    <img src="{{ post.image }}" alt="">
+    <p class="article-card__title">
+      {{ post.title }}
+    </p>
+    <p class="article-card__info">
+      {{ post.outline }}
+    </p>
+  </div>
+</a>
+  {% endfor %}
 
-      </p>
-    </div>
+
+
+
+
+
+  <!-- カードA 画像-タイトル-導入分 -->
+  <!-- <div class="pickup article-card col-12">
+    <p class="article-card__tags">
+      <span>AI</span>
+      <span>loT</span>
+    </p>
+    <img src="/assets/img/sample4.jpg" alt="">
+    <p class="article-card__title">
+      メロスは激怒した。必ず、かの邪智暴虐の王を除かなければならぬと決意した。
+    </p>
+    <p class="article-card__info">
+      メロスには政治がわからぬ。メロスは、村の牧人である。笛を吹き、羊と遊んで暮して来た。けれども邪悪に対しては、人一倍に敏感であった。
+
+    </p>
+  </div> -->
 
     <!-- カードB タイトル/画像 -->
-    <div class="article-card col-12">
+    <!-- <div class="article-card col-12">
       <div class="row">
         <div class="col order-2">
           <img src="/assets/img/sample.jpg" alt="">
@@ -79,10 +102,10 @@ title: 建設プロジェクト効率化のためのクラウドサービスの�
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- カードB タイトル/画像 -->
-    <div class="article-card col-12">
+    <!-- <div class="article-card col-12">
       <div class="row">
         <div class="col order-2">
           <img src="/assets/img/sample2.jpg" alt="">
@@ -96,10 +119,10 @@ title: 建設プロジェクト効率化のためのクラウドサービスの�
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- カードA 画像-タイトル-導入分 -->
-    <div class="pickup article-card col-12">
+    <!-- <div class="pickup article-card col-12">
       <p class="article-card__tags">
         <span>AI</span>
       </p>
@@ -110,10 +133,10 @@ title: 建設プロジェクト効率化のためのクラウドサービスの�
       <p class="article-card__info">
         メロスには機械学習がわからぬ。メロスは、エンジニアである。コードを書き、MBPと遊んで暮して来た。けれども最新技術に対しては、人一倍に敏感であった。
       </p>
-    </div>
+    </div> -->
 
     <!-- カードB タイトル/画像 -->
-    <div class="article-card col-12">
+    <!-- <div class="article-card col-12">
       <div class="row">
         <div class="col order-2">
           <img src="/assets/img/sample4.jpg" alt="">
@@ -127,7 +150,7 @@ title: 建設プロジェクト効率化のためのクラウドサービスの�
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </div>
   <!-- //メインカラム中身 -->
