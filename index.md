@@ -13,11 +13,10 @@ title: 建設プロジェクト効率化のためのクラウドサービスの�
   <div class="row">
 
   <!-- カードA 画像-タイトル-導入分 -->
-
   {% for post in site.posts %}
   <div class="pickup article-card col-12">
     <p class="article-card__tags">
-      <a class="inlink" href="">{{ post.categories }}</a>
+      <a class="inlink" href="{{ site.url }}/{{ post.categories }}.html">{{ post.categories }}</a>
     </p>
     <a href="{{ post.url }}">
     <img src="{{ post.image }}" alt="">

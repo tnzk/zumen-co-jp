@@ -1,10 +1,10 @@
 <nav class="nav-horizontal">
   <div class="mask">
     <ul class="list">
-      {% for post in site.posts %}
+      {% for category in site.categories %}
       <li>
-        <a href="#">
-          {{ post.categories }}
+        <a href="{{ site.url }}/{{ category[0] }}.html">
+          {{ category[0] }}
         </a>
       </li>
       {% endfor %}

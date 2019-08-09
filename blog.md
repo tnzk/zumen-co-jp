@@ -4,7 +4,6 @@ layout: blog
 title: 一覧テスト
 ---
 
-<!-- <div class="row list-page"> -->
   {% for post in site.posts %}
   <div class="pickup article-card col-12">
     <p class="article-card__tags">

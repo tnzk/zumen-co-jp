@@ -1,26 +1,15 @@
 ---
 layout: sub
 ---
-<!-- <div class="row no-gutters blog-box"> -->
-  <!-- <div class="col-12"> -->
-    <!-- <div class="blog-header"> -->
-      <!-- <div class="cate-tag-date"> -->
-        <!-- <span class="blog-header__categories">
-          <a href="{{ site.url }}/test.html">{{ site.categories }}</a>
-        </span> -->
-        <!-- <span class="blog-header__postdate">
-          {{ page.date | date: "%Y-%m-%d" }}
-        </span> -->
-      </div>
-      <!-- <h1>{{ site.categories }}</h1> -->
+<div class="row no-gutters blog-box">
+  <div class="col-12">
+    <div class="blog-header">
+      <h1 class="center">{{ page.title }} - category</h1>
+    </div>
     </div>
     <div class="row">
       <div class="col-12 col-sm-8 col-md-8 blog-box__main">
-        {{ page.content }}
-        <div class="author-share">
-           <p>authorする：{{ page.author }}</p>
-          <p>タグする：{{ page.tags }}</p>
-        </div>
+        {{ content }}
       </div>
       <div class="col-sm-4 col-md-4 d-none d-sm-block blog-box__sub">
         {% include pr-pu.html %}

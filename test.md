@@ -3,12 +3,56 @@
 layout: sub
 title: testテスト試験てすと123abc
 ---
-
 <div class="row">
   <div class="col-12">
+
+  {% for category in site.categories %}
+    <h3>{{ category[0] }}</h3>
+    <ul>
+      {% for post in category[1] %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
 # ※これはテスト.md(sub召喚)です。
 
 ↓テスト
+<h1>元</h1>
+{% for category in site.categories %}
+<h3>{{ category[0] }}</h3>
+  <ul>
+    {% for post in category[1] %}
+      <li>{{ post.url }}★{{ post.title }}</li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+<h1>limit:1</h1>
+{% for category in site.categories limit:1 %}
+  <h3>{{ category[0] }}</h3>
+  <ul>
+    {% for post in category[1] %}
+      <li>{{ post.url }}★{{ post.title }}</li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+
+
+<h1>べすとあんさ</h1>
+
+    {% for post in site.categories.AI %}
+        <li>{{ post.title }}</li>
+    {% endfor %}    
+
+<h1>改変★べすとあんさ</h1>
+        {% for post in site.categories.{{ category }} %}
+            <li>{{ post.title }}</li>
+        {% endfor %}   
+
+<h1>前のテスト</h1>
+
+
 <ul>
   {% for post in site.posts %}
     <li>
