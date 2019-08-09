@@ -8,7 +8,6 @@ title: 建設プロジェクト効率化のためのクラウドサービスの�
   <div class="row">
     <!-- メインカラム -->
     {% include article-card_a.html %}
-    {% include article-card_b.html %}
   </div>
 </div>
 
