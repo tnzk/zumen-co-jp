@@ -18,8 +18,37 @@ layout: sub
       <div class="col-12 col-sm-8 col-md-8 blog-box__mainContent">
         {{ page.content }}
         <div class="author-share">
-           <p class="vio">{{ page.author }}</p>
-          <p>プロフテキストプロフテキストプロフテキストプロフテキストプロフテキスト<br>プロフテキストプロフテキストプロフテキストプロフテキスト。</p>
+          <div class="bio col-12">
+            {% if page.author == 'hamaguchi' %}
+            <img src="{{ site.url }}/{{ site.authors.hamaguchi.icon }}">
+            {% elsif page.author == 'hutakami' %}
+            <img src="{{ site.url }}/{{ site.authors.hutakami.icon }}">
+            {% endif %}
+          </div>
+          <div class="bio col-12">
+            {% if page.author == 'hamaguchi' %}
+            <p>{{ site.authors.hamaguchi.display_name }}</p>
+            <p>{{ site.authors.hamaguchi.bio }}</p>
+            {% elsif page.author == 'hutakami' %}
+            <p>{{ site.authors.hutakami.display_name }}</p>
+            <p>{{ site.authors.hutakami.bio }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="pager">
+          {% if page.next %}
+          <div class="pager-left">
+            <i class="fas fa-angle-double-left"></i><a href="{{ page.next.url }}">【{{ page.next.categories }}】{{ page.next.title }}</a>
+          </div>
+          {% endif %}
+          {% if page.previous %}
+          <div class="pager-right">
+            <a href="{{ page.previous.url }}">【{{ page.previous.categories }}】{{ page.previous.title }}</a><i class="fas fa-angle-double-right"></i>
+          </div>
+          {% endif %}
+          <hr class="clear">
         </div>
       </div>
       <div class="col-sm-4 col-md-4 d-none d-sm-block blog-box__sub">

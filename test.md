@@ -45,10 +45,6 @@ title: testテスト試験てすと123abc
         <li>{{ post.title }}</li>
     {% endfor %}    
 
-<h1>改変★べすとあんさ</h1>
-        {% for post in site.categories.{{ category }} %}
-            <li>{{ post.title }}</li>
-        {% endfor %}   
 
 <h1>前のテスト</h1>
 

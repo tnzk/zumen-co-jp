@@ -710,10 +710,75 @@ margin-top:2.6rem;
   background-color: #fff;
   border-radius: 5px;
   padding:1.5rem;
-  margin-bottom:2rem;
+  margin-bottom:  1rem;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
   margin:30px auto;
 }
-.author-share .vio{
+.bio{
   text-align: center;
+  margin:0 auto;
+}
+.author-share .bio img{
+  width: 80px;
+  height:80px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  padding:0.5rem;
+  margin:0 auto;
+}
+.author-share .bio p{
+  text-align: center;
+  margin:0 auto;
+}
+.pager{
+float:left;
+width: 100%;
+}
+.clear{
+  border: none;
+clear: both;
+}
+
+.pager div{
+  width:48%;
+  float: left;
+  height: 6em;
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  padding:.7rem 1.2rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+ margin-bottom: 3rem;
+}
+.pager a{
+  font-family: 'ABeeZee', sans-serif;
+  color: #75d9bd;
+  text-decoration: none;
+  transition: 0.2s;
+  height: 6em;
+}
+.pager a:hover{
+  color: #000;
+}
+.pager-left {
+  margin-left: -1em;
+  margin-right: 4%;
+}
+.pager-left a{
+  display: inline-block;
+  padding-left: 1.2em;
+}
+.pager-left i{
+  position: absolute;
+  top:1rem;
+  left:1rem;
+}
+.pager-right a{
+  display: inline-block;
+  padding-right: 1.2em;
+}
+.pager-right i{
+  position: absolute;
+  top:1rem;
+  right:1rem;
 }

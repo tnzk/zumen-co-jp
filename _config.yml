@@ -7,3 +7,18 @@ encoding: utf-8
 highlighter: rouge
 plugins: [jekyll-lunr-js-search]
 image: /assets/img/sample.jpg
+author :
+  name : HOGE
+  email : hoge@example.com
+  output: true
+authors:
+  hamaguchi:
+    display_name: 濵口 恭平 / 取締役
+    email : hamaguchi@example.com
+    bio: はまぐちぷろふ文章
+    icon: /assets/img/icontest.png
+  hutakami:
+    display_name: 二上 祥 / 代表取締役
+    email : hutakami@example.com
+    bio: ふたかみプロフ文章
+  output: true
