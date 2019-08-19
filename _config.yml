@@ -5,7 +5,9 @@ show_downloads: false
 google_analytics:
 encoding: utf-8
 highlighter: rouge
-plugins: [jekyll-lunr-js-search]
+plugins:
+ - jekyll-lunr-js-search
+ - jekyll-paginate
 image: /assets/img/sample.jpg
 author :
   name : HOGE
@@ -22,3 +24,5 @@ authors:
     email : hutakami@example.com
     bio: ふたかみプロフ文章
   output: true
+paginate: 3
+paginate_path: "/blog/page:num"

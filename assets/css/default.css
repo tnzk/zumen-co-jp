@@ -43,19 +43,10 @@ p, ol, ul {
 .article-card {
   border-bottom: 1px solid #e6e6e6;
   padding: 1.5rem;
-  /* position: relative;
-z-index: 1; */
 }
 
 .article-card a {
   text-decoration: none;
-  /* position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    text-indent:0;
-    z-index: 2; */
 }
 
 .article-card a.inlink {
@@ -74,7 +65,7 @@ z-index: 1; */
   display: inline-block;
   font-feature-settings: "palt";
   letter-spacing: -0.1rem;
-  margin-top:1rem;
+  margin-top:1.5rem;
 }
 
 .article-card__info {
@@ -95,7 +86,6 @@ img {
   display: block;
   width: 100%;
   overflow: hidden;
-  border: 1px solid red;
 }
 
 .zoomin {

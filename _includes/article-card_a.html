@@ -1,7 +1,7 @@
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 <div class="pickup article-card col-12">
   <p class="article-card__tags">
-    <a class="inlink" href="{{ site.url }}/{{ post.categories }}.html">{{ post.categories }}</a>
+    <a class="inlink" href="{{ site.url }}/blog/{{ post.categories }}.html">{{ post.categories }}</a>
   </p>
   <a href="{{ post.url }}">
     <div class="zoomin">
