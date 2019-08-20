@@ -40,10 +40,11 @@ p, ol, ul {
   text-align: justify;
 }
 
-.article-card {
-  border-bottom: 1px solid #e6e6e6;
+div.article-card + div.article-card{
+  border-top: 1px solid #eeeeee;
   padding: 1.5rem;
 }
+
 
 .article-card a {
   text-decoration: none;
@@ -809,4 +810,45 @@ dd {
   position: absolute;
   top: 1rem;
   right: 1rem;
+}
+
+.pagination{
+  width:100%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination a,.pagination span{
+  color: #79e2cf;
+  text-decoration: none;
+  font-size:1.8rem;
+  display: inline-block;
+  width:50px;
+  height:50px;
+  margin: 1em .2em ;
+  padding-top: .8em;
+  border-radius: 5px;
+  border:1px solid #e6e6e6;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+.pagination span{
+    color: #000;
+    border:none;
+  /* box-shadow: none; */
+}
+.tags a{
+  background-color: #79e2cf;
+  color: #fff;
+  font-weight: bold;
+  vertical-align: middle;
+  height:2.5rem;
+  text-decoration: none;
+  font-size:1rem;
+  display: inline-block;
+  border-radius: 5px;
+  padding:.5rem;
+  margin:.5em .3em;
 }

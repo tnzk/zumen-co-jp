@@ -1,0 +1,15 @@
+<nav class="nav-horizontal">
+  <div class="mask">
+    <ul class="list">
+      <li>
+        <a href="{{ site.url }}/blog/">all</a></li>
+      {% for tags in site.tags %}
+      <li>
+        <a href="{{ site.url }}/blog/{{ tags[0] }}.html">
+          {{ tags[0] }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

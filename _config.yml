@@ -1,6 +1,13 @@
+locale: ja-JP
 title: 株式会社ZUMEN
-logo: https://github.com/pages-themes/minimal/raw/master/assets/img/logo.png
+title_separator: "-"
+name: www.zumen.co.jp
 description: zumen-co-jp
+url: https://www.zumen.co.jp/
+baseiurl:
+twitter_username:
+github_username:
+breadcrumbs: true
 show_downloads: false
 google_analytics:
 encoding: utf-8
@@ -24,5 +31,5 @@ authors:
     email : hutakami@example.com
     bio: ふたかみプロフ文章
   output: true
-paginate: 3
+paginate: 2
 paginate_path: "/blog/page:num"

@@ -3,11 +3,27 @@
 layout: default
 title: 建設プロジェクト効率化のためのクラウドサービスの開発・運営
 ---
-
 <div class="col-12 col-sm-7 col-md maincol">
   <div class="row">
     <!-- メインカラム -->
-    {% include article-card_a.html %}
+    {% for post in site.posts %}
+    <div class="pickup article-card col-12">
+      <p class="article-card__tags">
+        <a class="inlink" href="{{ site.url }}/blog/{{ post.categories }}.html">{{ post.categories }}</a>
+      </p>
+      <a href="{{ post.url }}">
+        <div class="zoomin">
+          <img src="{{ post.image }}" alt="">
+        </div>
+      <p class="article-card__title">
+        {{ post.title }}
+      </p>
+      <p class="article-card__info">
+        {{ post.outline }}
+      </p>
+      </a>
+    </div>
+    {% endfor %}
   </div>
 </div>
 
