@@ -26,13 +26,13 @@ authors:
     display_name: 二上 祥
     position: 代表取締役
     email : hutakami@example.com
-    bio: ふたかみプロフ文章
+    bio: 二上さんのプロフィールテキストです。
     icon: /assets/img/iconsample.png
   hamaguchi:
-    display_name: 濵口 恭平
+    display_name: 濱口 恭平
     position: 取締役
     email : hamaguchi@example.com
-    bio: はまぐちぷろふ文章
+    bio: 濱口さんのプロフィールテキストです。
     icon: /assets/img/iconsample.png
-paginate: 2
+paginate: 5
 paginate_path: "/blog/page:num"

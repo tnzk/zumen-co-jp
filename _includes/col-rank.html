@@ -1,50 +1,23 @@
-<div class="col-12">
-  <h3>注目記事</h3>
-</div>
-<!-- カードD 画像/タイトル -->
-<div class="article-card col-12">
-  <div class="row no-gutters">
-    <div class="col rank-img__thump mt-15">
-      <div class="zoomin">
-        <img src="/assets/img/sample2.jpg">
-      </div>
-    </div>
-    <div class="col-7">
-      <p class="article-card__title">
-        ピックアップタイプじゃないノーマルなarticleカードだよ。
-      </p>
-    </div>
-  </div>
-</div>
+  <h3 class="mt-15">注目記事</h3>
+  <!-- カードD 画像/タイトル -->
+  {% for post in site.posts %}
 
-<!-- カードD 画像/タイトル -->
-<div class="article-card col-12">
-  <div class="row no-gutters">
-    <div class="col rank-img__thump mt-15">
-      <div class="zoomin">
-        <img src="/assets/img/sample3.jpg">
+  <div class="article-card col-12">
+    <div class="row no-gutters">
+      <div class="col rank-img__thump mt-15">
+        <a href="{{ post.url }}">
+          <div class="zoomin">
+            <img src="{{ post.image }}">
+          </div>
+        </a>
+      </div>
+      <div class="col-7">
+        <a href="{{ post.url }}">
+          <p class="article-card__title">
+            {{ post.title }}
+          </p>
+        </a>
       </div>
     </div>
-    <div class="col-7">
-      <p class="article-card__title">
-        ピックアップタイプじゃないノーマルなarticleカードだよ。
-      </p>
-    </div>
   </div>
-</div>
-
-<!-- カードD 画像/タイトル -->
-<div class="article-card col-12 border-none">
-  <div class="row no-gutters">
-    <div class="col rank-img__thump mt-15">
-      <div class="zoomin">
-        <img src="/assets/img/sample4.jpg">
-      </div>
-    </div>
-    <div class="col-7">
-      <p class="article-card__title">
-        ピックアップタイプじゃないノーマルなarticleカードだよ。
-      </p>
-    </div>
-  </div>
-</div>
+  {% endfor %}
