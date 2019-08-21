@@ -21,15 +21,18 @@ author :
   email : hoge@example.com
   output: true
 authors:
-  hamaguchi:
-    display_name: 濵口 恭平 / 取締役
-    email : hamaguchi@example.com
-    bio: はまぐちぷろふ文章
-    icon: /assets/img/icontest.png
+  output: true
   hutakami:
-    display_name: 二上 祥 / 代表取締役
+    display_name: 二上 祥
+    position: 代表取締役
     email : hutakami@example.com
     bio: ふたかみプロフ文章
-  output: true
+    icon: /assets/img/iconsample.png
+  hamaguchi:
+    display_name: 濵口 恭平
+    position: 取締役
+    email : hamaguchi@example.com
+    bio: はまぐちぷろふ文章
+    icon: /assets/img/iconsample.png
 paginate: 2
 paginate_path: "/blog/page:num"
