@@ -1,0 +1,15 @@
+<nav class="nav-horizontal">
+  <div class="mask">
+    <ul class="list">
+      <li>
+        <a href="{{ site.url }}/blog/">全記事一覧</a></li>
+      {% for category in site.categories %}
+      <li>
+        <a href="{{ site.url }}/blog/{{ category[0] }}.html">
+          {{ category[0] }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

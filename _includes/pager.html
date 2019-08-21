@@ -1,0 +1,13 @@
+<div class="pager">
+  {% if page.next %}
+  <div class="pager-left">
+    <i class="fas fa-angle-double-left"></i><a href="{{ page.next.url }}">【{{ page.next.categories }}】{{ page.next.title }}</a>
+  </div>
+  {% endif %}
+  {% if page.previous %}
+  <div class="pager-right">
+    <a href="{{ page.previous.url }}">【{{ page.previous.categories }}】{{ page.previous.title }}</a><i class="fas fa-angle-double-right"></i>
+  </div>
+  {% endif %}
+  <hr class="clear">
+</div>

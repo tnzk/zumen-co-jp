@@ -1,0 +1,48 @@
+<!-- ヘッダー1 -->
+<script>
+  (function($) {
+    $(function() {
+      var $header = $('#top-head');
+      // Nav Fixed
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+          $header.addClass('fixed');
+        } else {
+          $header.removeClass('fixed');
+        }
+      });
+      // Nav Toggle Button
+      $('#nav-toggle').click(function() {
+        $header.toggleClass('open');
+      });
+    });
+  })(jQuery);
+</script>
+</head>
+<body>
+<header id="top-head" class="container-fluid">
+  <div class="inner">
+    <div id="mobile-head">
+      <h1 class="logo"><a href="/">ZUMEN</a></h1>
+      <div id="nav-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <nav id="global-nav">
+      <ul>
+        {% include g-nav_link.html %}
+      </ul>
+    </nav>
+  </div>
+</header>
+<div id="main-visual" class="container-fluid">
+  <div class="row">
+    <p class="col-lg col-xl"></p>
+  </div>
+</div>
+
+<!-- //ヘッダー1 -->

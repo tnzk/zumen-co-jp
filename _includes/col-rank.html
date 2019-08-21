@@ -1,0 +1,23 @@
+  <h3 class="mt-15">注目記事</h3>
+  <!-- カードD 画像/タイトル -->
+  {% for post in site.posts %}
+
+  <div class="article-card col-12">
+    <div class="row no-gutters">
+      <div class="col rank-img__thump mt-15">
+        <a href="{{ post.url }}">
+          <div class="zoomin">
+            <img src="{{ post.image }}">
+          </div>
+        </a>
+      </div>
+      <div class="col-7">
+        <a href="{{ post.url }}">
+          <p class="article-card__title">
+            {{ post.title }}
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
