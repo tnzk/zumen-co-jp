@@ -5,12 +5,12 @@
   </p>
   <a href="{{ post.url }}">
     <div class="zoomin">
-      <img src="{{ post.image }}" alt="">
+      <img src="{{ post.image }}" loading="lazy">
     </div>
-  <p class="article-card__title">
-    {{ post.title }}
+    <p class="article-card__title">
+    {{ post.image.name }}{{ post.title }}
   </p>
-  <p class="article-card__info">
+    <p class="article-card__info">
     {{ post.outline }}
   </p>
   </a>

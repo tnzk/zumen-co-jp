@@ -19,10 +19,9 @@ layout: sub
         {{ page.content }}
         <div class="tags">
           {% for tags in page.tags %}
-            <a href="{{ site.url }}/blog/{{ tags[0] }}.html">
-              <i class="fas fa-hashtag"></i> {{ tags }}
-            </a>
-          {% endfor %}
+          <a href="{{ site.url }}/blog/{{ tags[0] }}.html">
+            <i class="fas fa-hashtag"></i> {{ tags }}
+            {% endfor %}
         </div>
         <div class="author-share">
           <div class="bio col-12">
