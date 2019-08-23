@@ -1,6 +1,7 @@
 ---
 layout: sub
 ---
+
 <div class="row no-gutters blog-box">
   <div class="col-12">
     <div class="blog-header">
@@ -21,14 +22,15 @@ layout: sub
           {% for tags in page.tags %}
           <a href="{{ site.url }}/blog/{{ tags[0] }}.html">
             <i class="fas fa-hashtag"></i> {{ tags }}
-            {% endfor %}
+          </a>
+          {% endfor %}
         </div>
         <div class="author-share">
           <div class="bio col-12">
             {% if page.author == 'hamaguchi' %}
-            <img src="{{ site.url }}/{{ site.authors.hamaguchi.icon }}">
+            <img src="{{ site.url }}/{{ site.authors.hamaguchi.icon }}" />
             {% elsif page.author == 'hutakami' %}
-            <img src="{{ site.url }}/{{ site.authors.hutakami.icon }}">
+            <img src="{{ site.url }}/{{ site.authors.hutakami.icon }}" />
             {% endif %}
           </div>
           <div class="bio col-12">
@@ -41,10 +43,10 @@ layout: sub
             {% endif %}
           </div>
         </div>
+        {% include similar_posts.html %}
       </div>
       <div class="col-sm-4 col-md-4 d-none d-sm-block blog-box__sub">
-        {% include pr-pu.html %}
-        {% include col-rank.html %}
+        {% include pr-pu.html %} {% include col-rank.html %}
       </div>
     </div>
   </div>
