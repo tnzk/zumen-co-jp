@@ -1,0 +1,25 @@
+<h3 class="related-title">
+  {% if page.author == 'hamaguchi' %}{{ site.authors.hamaguchi.display_name }}{%
+  elsif page.author == 'hutakami' %}{{ site.authors.hutakami.display_name }}{%
+  endif %}の記事
+</h3>
+<ul class="related-posts">
+  {% if page.author == 'hamaguchi' %} {% assign author = site.posts | where:
+  "author", "hamaguchi" %} {% for post in author %}
+  <li
+    class="relatedPost"
+    style="background-image:  url({{ post.image }});background-size:cover;"
+  >
+    <a href="{{ post.url }}"> {{ post.title }}</a>
+  </li>
+  {% endfor %} {% elsif page.author == 'hutakami' %} {% assign author =
+  site.posts | where: "author", "hutakami" %} {% for post in author %}
+  <li
+    class="relatedPost"
+    style="background-image:  url({{ post.image }});background-size:cover;"
+  >
+    <a href="{{ post.url }}"> {{ post.title }}</a>
+  </li>
+  {% endfor %} {% endif %}
+</ul>
+<hr class="clear" />

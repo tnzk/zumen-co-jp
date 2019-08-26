@@ -28,9 +28,15 @@ layout: sub
         <div class="author-share">
           <div class="bio col-12">
             {% if page.author == 'hamaguchi' %}
-            <img src="{{ site.url }}/{{ site.authors.hamaguchi.icon }}" />
+            <img
+              src="{{ site.url }}/{{ site.authors.hamaguchi.icon }}"
+              class="author-icon"
+            />
             {% elsif page.author == 'hutakami' %}
-            <img src="{{ site.url }}/{{ site.authors.hutakami.icon }}" />
+            <img
+              src="{{ site.url }}/{{ site.authors.hutakami.icon }}"
+              class="author-icon"
+            />
             {% endif %}
           </div>
           <div class="bio col-12">
@@ -43,7 +49,7 @@ layout: sub
             {% endif %}
           </div>
         </div>
-        {% include similar_posts.html %}
+        {% include similar_posts.html %}{% include authors_posts.html %}
       </div>
       <div class="col-sm-4 col-md-4 d-none d-sm-block blog-box__sub">
         {% include pr-pu.html %} {% include col-rank.html %}
