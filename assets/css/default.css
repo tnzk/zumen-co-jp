@@ -709,7 +709,7 @@ dd {
 
 .blog-header h1,
 .blog-box p:not(a) {
-  text-align: justify;
+  /* text-align: justify; */
   font-feature-settings: "palt";
   letter-spacing: 0.1rem;
   color: #333333;
@@ -725,7 +725,7 @@ dd {
   margin-bottom: 1em;
 }
 
-.blog-box__mainContent ul:not(ul.related-posts) {
+.blog-box__mainContent ul:not(ul.related-posts, ul.related-posts-test) {
   padding-left: 1.5em;
   margin-bottom: 1em;
 }
@@ -739,7 +739,7 @@ dd {
   margin: 1em auto 1em 1.5rem;
 }
 
-.blog-box__mainContent p a {
+.blog-box__mainContent a {
   transition: 0.2s;
   color: #333333;
   text-decoration: none;
@@ -770,6 +770,9 @@ dd {
 
 .mt-26 {
   margin-top: 2.6rem;
+}
+.mt-35 {
+  margin-top: 3.5rem;
 }
 
 .author-share {
@@ -924,46 +927,13 @@ dd {
   color: #000;
   border-bottom: 1px dotted #79e2cf;
 }
-.similar_posts {
+.related-title,
+ul.related-posts {
+  margin-bottom: 3rem;
+  padding-left: 0;
+  text-align: center;
 }
 
-h3.related-title,
-ul.related-posts {
-  margin: 1.5rem auto;
-  padding-left: 0;
-}
-.relatedPost {
-  display: block;
-  list-style: none;
-  width: 48%;
-  overflow: hidden;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  position: relative;
-  height: 15vh;
-  padding: 0.3em 0.7em;
-  float: left;
-  margin: 0 2% 3% 0;
-  position: relative;
-  transition: all 0.2s ease-in-out;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-.relatedPost::after {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-.relatedPost:hover {
-  opacity: 0.7;
-  filter: alpha(opacity=70);
-  -webkit-transform: scale(1.03);
-  transform: scale(1.03);
-}
 .relatedPost .author-icon {
   width: 40px;
   height: 40px;
@@ -975,12 +945,37 @@ ul.related-posts {
   margin: 0;
   z-index: 1;
 }
+.related-posts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+.relatedPost {
+  margin: 0 -2%;
+  display: block;
+  overflow: hidden;
+  height: 26vh;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.relatedPost-title {
+  text-align: start;
+  padding: 0.5em 0.5em 0 0.5em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.relatedPost_img {
+  width: 100%;
+  height: 15vh;
+  object-fit: cover;
+  overflow: hidden;
+  margin: 0;
+}
+
 .relatedPost a {
-  text-decoration: none;
-  font-size: 90%;
-  color: #fff;
   position: relative;
-  z-index: 1;
   display: block;
   width: 100%;
   height: 100%;
