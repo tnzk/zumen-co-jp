@@ -981,3 +981,8 @@ ul.related-posts {
   height: 100%;
   z-index: 2;
 }
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60px;
+}
