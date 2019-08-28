@@ -1,18 +1,22 @@
 {% for post in paginator.posts %}
-<div class="pickup article-card col-12">
+<div class="pickup article-card card-a">
   <p class="article-card__tags">
-    <a class="inlink" href="{{ site.url }}/blog/{{ post.categories }}.html">{{ post.categories }}</a>
+    <a class="inlink" href="{{ site.url }}/blog/{{ post.categories }}.html">{{
+      post.categories
+    }}</a>
   </p>
   <a href="{{ post.url }}">
     <div class="zoomin">
-      <img src="{{ post.image }}" loading="lazy">
+      <div class="mp0 hidden">
+        <img src="{{ post.image }}" loading="lazy" />
+      </div>
+      <p class="article-card__title large">
+        {{ post.title }}
+      </p>
+      <p class="article-card__info">
+        {{ post.outline }}
+      </p>
     </div>
-    <p class="article-card__title">
-    {{ post.image.name }}{{ post.title }}
-  </p>
-    <p class="article-card__info">
-    {{ post.outline }}
-  </p>
   </a>
 </div>
 {% endfor %}

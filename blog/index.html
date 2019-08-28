@@ -4,25 +4,29 @@ layout: blog
 title: 記事一覧
 ---
 
-{% include article-card_a.html %}
+<!-- {% include article-card_a.html %}  -->
+{% include article-card_b.html %}
 
 <!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path | relative_url }}"><i class="fas fa-chevron-left"></i></a>
-  {% endif %}
-  {% for page in (1..paginator.total_pages) %}
-  {% if page == paginator.page %}
+  <a href="{{ paginator.previous_page_path | relative_url }}"
+    ><i class="fas fa-chevron-left"></i
+  ></a>
+  {% endif %} {% for page in (1..paginator.total_pages) %} {% if page ==
+  paginator.page %}
   <span>{{ page }}</span>
   {% elsif page == 1 %}
   <a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a>
   {% else %}
-  <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
-  {% endif %}
-  {% endfor %}
-  {% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path | relative_url }}"> <i class="fas fa-angle-right"></i></a>
+  <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{
+    page
+  }}</a>
+  {% endif %} {% endfor %} {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path | relative_url }}">
+    <i class="fas fa-angle-right"></i
+  ></a>
   {% endif %}
 </div>
 {% endif %}

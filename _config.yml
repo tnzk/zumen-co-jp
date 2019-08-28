@@ -30,5 +30,5 @@ authors:
     email: hamaguchi@example.com
     bio: 濱口さんのプロフィールテキストです。
     icon: /assets/img/iconsample.png
-paginate: 5
+paginate: 7
 paginate_path: "/blog/page:num"

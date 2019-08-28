@@ -1,21 +1,22 @@
 <h3 class="mt-15">注目記事</h3>
 <!-- カードD 画像/タイトル -->
-{% for post in site.posts %}
+{% for post in site.posts limit:5%}
 
 <div class="article-card col-12">
   <div class="row no-gutters">
     <div class="col rank-img__thump mt-15">
       <a href="{{ post.url }}">
         <div class="zoomin">
-          <img src="{{ post.image }}" loading="lazy">
+          <img src="{{ post.image }}" loading="lazy" />
         </div>
       </a>
     </div>
-    <div class="col-7">
+    
+    <div class="col-7">
       <a href="{{ post.url }}">
         <p class="article-card__title">
-            {{ post.title }}
-          </p>
+          {{ post.title }}
+        </p>
       </a>
     </div>
   </div>
