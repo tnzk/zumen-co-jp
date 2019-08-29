@@ -1,18 +1,15 @@
 <h3 class="mt-15">注目記事</h3>
 <!-- カードD 画像/タイトル -->
-{% for post in site.posts limit:5%}
 
-<div class="article-card col-12">
-  <div class="row no-gutters">
-    <div class="col rank-img__thump mt-15">
+<div class="article-card col-12 hidden">
+  {% for post in site.posts limit:5%}
+  <div class="row card-b zoomin">
+    <div class="col-4 mp0 hidden">
       <a href="{{ post.url }}">
-        <div class="zoomin">
-          <img src="{{ post.image }}" loading="lazy" />
-        </div>
+        <img src="{{ post.image }}" loading="lazy" />
       </a>
     </div>
-    
-    <div class="col-7">
+    <div class="col">
       <a href="{{ post.url }}">
         <p class="article-card__title">
           {{ post.title }}
@@ -20,5 +17,5 @@
       </a>
     </div>
   </div>
+  {% endfor %}
 </div>
-{% endfor %}
