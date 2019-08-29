@@ -1,21 +1,10 @@
 ---
-layout: sub
+layout: blog
 ---
-<div class="row no-gutters list-box">
-  <div class="col-12">
-    <div class="blog-header">
-      <h1 class="center">{{ page.title }} - category</h1>
-    </div>
-  </div>
 
-  <div class="row list-box">
-    <div class="col-12 col-sm-8 col-md-8 blog-box__main">
-{{content}}
-    </div>
-    <div class="col-sm-4 col-md-4 d-none d-sm-block blog-box__sub mt-26">
-      {% include pr-pu.html %}
-      {% include col-rank.html %}
-    </div>
-  </div>
+<div class="category_head">
+  <h1 class="category_title">
+    <i class="fas fa-folder-open"></i> {{ page.title }}
+  </h1>
 </div>
-</div>
+{{ content }}

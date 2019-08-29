@@ -3,7 +3,7 @@ title: 株式会社ZUMEN
 title_separator: "-"
 name: www.zumen.co.jp
 description: zumen-co-jp
-url: https://www.zumen.co.jp/
+url: https://www.zumen.co.jp
 baseiurl:
 twitter_username:
 github_username:
@@ -13,26 +13,22 @@ google_analytics:
 encoding: utf-8
 highlighter: rouge
 plugins:
- - jekyll-lunr-js-search
- - jekyll-paginate
+  - jekyll-lunr-js-search
+  - jekyll-paginate
 image: /assets/img/sample.jpg
-author :
-  name : HOGE
-  email : hoge@example.com
-  output: true
 authors:
   output: true
   hutakami:
     display_name: 二上 祥
     position: 代表取締役
-    email : hutakami@example.com
+    email: hutakami@example.com
     bio: 二上さんのプロフィールテキストです。
     icon: /assets/img/iconsample.png
   hamaguchi:
     display_name: 濱口 恭平
     position: 取締役
-    email : hamaguchi@example.com
+    email: hamaguchi@example.com
     bio: 濱口さんのプロフィールテキストです。
     icon: /assets/img/iconsample.png
-paginate: 5
+paginate: 7
 paginate_path: "/blog/page:num"

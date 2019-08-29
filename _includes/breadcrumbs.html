@@ -1,52 +1,14 @@
 <div id="breadcrumbs">
-  {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
-  <a href="/"><i class="fas fa-home"></i></a>
-  {% for crumb in crumbs offset: 1 %}
-  {% if forloop.last %}
-  <i class="fas fa-angle-right"></i> {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+  <a href="/"><i class="fas fa-home"></i> top </a>
+  {% if page.url == "/blog/" %}
+  <i class="fas fa-angle-right"></i> {{ page.title }}
+  {% elsif page.url contains "/blog/" %}
+  <i class="fas fa-angle-right"></i> <a href="{{ site.url }}/blog/">Blog</a>
+  <i class="fas fa-angle-right"></i> {{ page.title }}
   {% else %}
-  <i class="fas fa-angle-right"></i> <a
-    href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+  <i class="fas fa-angle-right"></i> <a href="{{ site.url }}/blog/">Blog</a>
+  <i class="fas fa-angle-right"></i>
+  <a href="{{ site.url }}/test.html">{{ page.categories }}</a>
+  <i class="fas fa-angle-right"></i> {{ page.title }}
   {% endif %}
-  {% endfor %}
-</div>
-<!-- 自前版 -->
-<div id="breadcrumbs">
-  {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
-  <a href="/"><i class="fas fa-home"></i></a>
-  {% for crumb in crumbs offset: 1 %}
-  {% if forloop.last %}
-  <i class="fas fa-angle-right"></i> {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
-  {% else %}
-  <i class="fas fa-angle-right"></i> <a
-    href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
-  {% endif %}
-  {% endfor %}
-</div>
-<!-- 自前版ちょっとずつ -->
-<div id="breadcrumbs">
-  <a href="/"><i class="fas fa-home"></i></a>
-    {% if page.url == "/blog/" %}
-      <!-- ブログ一覧なら　＞ページタイトル OK-->
-      <i class="fas fa-angle-right"></i> {{ page.title }}
-    {% elsif page.url contains '.html' %}
-      <!-- ブログ一覧じゃなければ　blog＞category tag OK -->
-          <i class="fas fa-angle-right"></i> <a href="{{ site.url }}/blog/">Blog</a>
-          <i class="fas fa-angle-right"></i> {{ page.title }}
-    {% elsif page.url contains '0' %}
-      <!-- そうでもなければ　blog＞category＞ページタイトル -->
-      <a href="{{ site.url }}/blog/{{ page.categories }}.html">{{ page.categories }}</a>
-      <i class="fas fa-angle-right"></i> {{ page.title }}
-    {% endif %}
-  </div>
-
-  <div id="breadcrumbs">
-    {% if page.url == "/blog/" %}
-  A
-  {% elsif page.url contains '.html' %}
-  B
-  {% elsif page.url contains '0' %}
-  C
-  {% endif %}
-
 </div>
