@@ -1,11 +1,11 @@
 ---
 # YAML Front Matter
 layout: cate-list
-title: テストカテゴリ名
+title: BIM
 ---
 
 <div class="article-card col-12 hidden">
-  {% for post in site.categories.AI %}
+  {% for post in site.categories.BIM %}
   <div class="row card-b zoomin">
     <div class="col-4 mp0 hidden">
       <a href="{{ post.url }}">
@@ -14,9 +14,7 @@ title: テストカテゴリ名
     </div>
     <div class="col">
       <p class="article-card__tags">
-        <a class="inlink" href="{{ site.url }}/{{ post.categories }}.html">{{
-          post.categories
-        }}</a>
+        <a class="inlink">{{ post.categories }}</a>
       </p>
       <a href="{{ post.url }}">
         <p class="article-card__title">
