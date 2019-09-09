@@ -718,8 +718,8 @@ dd {
 }
 
 .blog-box__mainContent p {
-  line-height: 2em;
-  margin-bottom: 1em;
+  line-height: 2.5em;
+  margin-bottom: 2em;
 }
 
 .blog-box__mainContent ul:not(ul.related-posts, ul.related-posts-test) {
