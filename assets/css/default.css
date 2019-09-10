@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Yu Gothic M";
   src: local("Yu Gothic Medium");
 }
@@ -7,7 +7,7 @@
   font-family: "Yu Gothic M";
   src: local("Yu Gothic Bold");
   font-weight: bold;
-}
+} */
 
 html {
   font-size: 62.5%;
@@ -708,7 +708,6 @@ dd {
 .blog-header h1,
 .blog-box p:not(a) {
   font-feature-settings: "palt";
-  letter-spacing: 0.1rem;
   color: #333333;
 }
 
@@ -734,7 +733,6 @@ dd {
 .article h6 {
   margin: 1em auto 1em 0;
 }
-
 .blog-box__mainContent a {
   transition: 0.2s;
   color: #333333;
