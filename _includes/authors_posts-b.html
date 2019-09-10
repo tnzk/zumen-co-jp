@@ -1,0 +1,58 @@
+<div class="category_head m-y">
+  <h1 class="category_title"><i class="fas fa-pen-nib"></i> 同じ筆者の記事</h1>
+</div>
+{% for post in site.categories.BIM %}
+<div class="row card-b inpost zoomin">
+  <div class="col-4 mp0 hidden">
+    <a href="{{ post.url }}">
+      <img src="../../../../{{ post.image }}" loading="lazy" />
+    </a>
+  </div>
+  <div class="col inpost">
+    <!-- {{ post.categories }} -->
+    <a href="{{ post.url }}">
+      <p class="inpost_title">
+        {{ post.title }}
+      </p>
+    </a>
+  </div>
+</div>
+{% endfor %}
+<!--
+<h3 class="related-title">
+  {% if page.author == 'hamaguchi' %}{{ site.authors.hamaguchi.display_name }}{%
+  elsif page.author == 'hutakami' %}{{ site.authors.hutakami.display_name }}{%
+  endif %}の記事
+</h3>
+<ul class="related-posts row ">
+  {% if page.author == 'hamaguchi' %} {% assign author = site.posts | where:
+  "author", "hamaguchi" %} {% for post in author %}
+  <div class="col-12 col-sm-6 mt-15">
+    <li class="relatedPost zoomin">
+      <img
+        src="../../../{{ post.image }}"
+        alt="{{ post.title }}"
+        class="relatedPost_img"
+      />
+      <a href="{{ post.url }}">
+        <p class="relatedPost-title">{{ post.title }}</p>
+      </a>
+    </li>
+  </div>
+  {% endfor %} {% elsif page.author == 'hutakami' %} {% assign author =
+  site.posts | where: "author", "hutakami" %} {% for post in author %}
+  <div class="col-12 col-sm-6 mt-15">
+    <li class="relatedPost zoomin">
+      <img
+        src="{{ post.image }}"
+        alt="{{ post.title }}"
+        class="relatedPost_img"
+      />
+      <a href="{{ post.url }}">
+        <p class="relatedPost-title">{{ post.title }}</p>
+      </a>
+    </li>
+  </div>
+  {% endfor %} {% endif %}
+</ul>
+<hr class="clear" /> -->
