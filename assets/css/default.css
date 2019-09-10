@@ -101,8 +101,7 @@ a .article-card__title.large {
   font-size: 2rem;
 }
 
-a:hover .article-card__title,
-a:hover .article-card__info {
+a:hover .article-card__title {
   color: #79e2cf;
 }
 
