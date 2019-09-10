@@ -1,12 +1,13 @@
 <div id="breadcrumbs">
-  <a href="/"><i class="fas fa-home"></i> top </a>
+  <a href="/"><i class="fas fa-home"></i> </a>
   {% if page.url == "/blog/" %}
   <i class="fas fa-angle-right"></i> {{ page.title }}
   {% elsif page.url contains "/blog/" %}
-  <i class="fas fa-angle-right"></i> <a href="{{ site.url }}/blog/">Blog</a>
+  <i class="fas fa-angle-right"></i>
+  <a href="{{ site.url }}/blog/">記事一覧</a>
   <i class="fas fa-angle-right"></i> {{ page.title }}
   {% else %}
-  <i class="fas fa-angle-right"></i> <a href="{{ site.url }}/blog/">Blog</a>
+  <i class="fas fa-angle-right"></i> <a href="{{ site.url }}/blog/">記事一覧</a>
   <i class="fas fa-angle-right"></i>
   <a href="{{ site.url }}/test.html">{{ page.categories }}</a>
   <i class="fas fa-angle-right"></i> {{ page.title }}

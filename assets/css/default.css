@@ -908,6 +908,7 @@ dd {
   color: #666;
   padding: 1rem 1rem 1rem 2rem;
   margin: 0 auto;
+  line-height: 2.5rem;
 }
 #breadcrumbs a {
   color: #666;
