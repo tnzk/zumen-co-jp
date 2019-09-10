@@ -7,7 +7,9 @@ layout: sub
     <div class="blog-header">
       <div class="cate-tag-date">
         <span class="blog-header__categories">
-          <a href="{{ site.url }}/test.html">{{ page.categories }}</a>
+          <a href="{{ site.url }}/blog/{{ page.categories }}.html">{{
+            page.categories
+          }}</a>
         </span>
         <span class="blog-header__postdate">
           {{ page.date | date: "%Y年%-m月%-d日" }}

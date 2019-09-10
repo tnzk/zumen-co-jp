@@ -199,6 +199,11 @@ div.row > #top-head__text {
   padding: 0 5px 0 5px;
 }
 
+.blog-box__mainContent p {
+  line-height: 2.5em;
+  margin-bottom: 2em;
+}
+
 @media (min-width: 992px) {
   #top-head__text {
     font-size: 4rem;
@@ -220,6 +225,10 @@ div.row > #top-head__text {
 @media (max-width: 575.98px) {
   #top-head__text {
     font-size: 3rem;
+  }
+  .blog-box__mainContent p {
+    line-height: 2.8rem;
+    margin-bottom: 2em;
   }
 }
 
@@ -713,11 +722,6 @@ dd {
 .blog-box__mainContent > * {
   box-sizing: border-box;
   margin: auto 1.5rem;
-}
-
-.blog-box__mainContent p {
-  line-height: 2.5em;
-  margin-bottom: 2em;
 }
 
 .blog-box__mainContent ul:not(ul.related-posts, ul.related-posts-test) {
