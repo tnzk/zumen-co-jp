@@ -650,9 +650,11 @@ dd {
 
 .blog-header__categories a {
   font-family: "ABeeZee", sans-serif;
-  color: #000;
+  background-color: #79e2cf;
+  padding: 0.3rem 0.75rem;
+  color: #fff;
   font-weight: bold;
-  font-style: italic;
+  /* font-style: italic; */
   display: inline-block;
   margin-right: 0.5rem;
   margin-left: 0;
@@ -661,7 +663,7 @@ dd {
 }
 
 .blog-header__categories a:hover {
-  color: #79e2cf;
+  color: #000;
 }
 
 .blog-header__postdate {
@@ -695,7 +697,8 @@ dd {
 }
 .blog-box__mainContent a {
   transition: 0.2s;
-  color: #333333;
+  color: #79e2cf;
+  font-weight: bold;
   text-decoration: none;
   border-bottom: 3px solid #79e2cf;
 }
