@@ -10,12 +10,10 @@ title: BIM
     <div class="col-4 mp0 hidden">
       <a href="{{ post.url }}">
         <img src="{{ post.image }}" loading="lazy" />
+        <p class="article-card__tags small">{{ post.categories }}</p>
       </a>
     </div>
     <div class="col">
-      <p class="article-card__tags">
-        <a class="inlink">{{ post.categories }}</a>
-      </p>
       <a href="{{ post.url }}">
         <p class="article-card__title">
           {{ post.title }}

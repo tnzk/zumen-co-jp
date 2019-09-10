@@ -927,9 +927,10 @@ p.inpost_title {
   padding: 0.2rem 1.5rem;
   top: 1rem;
   left: 0;
+  z-index: 999;
 }
 .article-card__tags.small {
   font-size: 60%;
-  padding: 0 0.75rem;
+  padding: 0.3em 0.75rem;
   top: 0.5rem;
 }
