@@ -928,3 +928,8 @@ p.inpost_title {
   top: 1rem;
   left: 0;
 }
+.article-card__tags.small {
+  font-size: 60%;
+  padding: 0 0.75rem;
+  top: 0.5rem;
+}

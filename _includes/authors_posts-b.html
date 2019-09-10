@@ -7,10 +7,10 @@
   <div class="col-4 mp0 hidden">
     <a href="{{ post.url }}">
       <img src="../../../../{{ post.image }}" loading="lazy" />
+      <p class="article-card__tags small">{{ post.categories }}</p>
     </a>
   </div>
   <div class="col inpost">
-    <!-- {{ post.categories }} -->
     <a href="{{ post.url }}">
       <p class="inpost_title">
         {{ post.title }}

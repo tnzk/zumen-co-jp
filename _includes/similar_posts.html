@@ -11,6 +11,7 @@ contains tag %} {% assign same_tag_count = same_tag_count | plus: 1 %} {% endif
   <div class="col-4 mp0 hidden">
     <a href="{{ post.url }}">
       <img src="../../../../{{ post.image }}" loading="lazy" />
+      <p class="article-card__tags small">{{ post.categories }}</p>
     </a>
   </div>
   <div class="col">
