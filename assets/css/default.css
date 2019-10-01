@@ -8,6 +8,7 @@ html {
     "MS PGothic", "Helvetica Neue", HelveticaNeue, Helvetica, Arial, "Segoe UI",
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
+  scroll-behavior: smooth;
 }
 
 body {
@@ -690,12 +691,60 @@ dd {
   margin: 1em auto 1em 0;
 }
 
+.article h1[id],
+.article h2[id],
+.article h3[id],
+.article h4[id],
+.article h5[id],
+.article h6[id] {
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+.mokuji {
+  background-color: #f8f8f8;
+  padding: 1em;
+  border-radius: 5px;
+  border: 1px solid #d8d8d8;
+  /* margin: 0 auto; */
+  margin-bottom: 2em;
+  width: 95%;
+
+}
+
+h2.mokuji_title {
+  font-size: 1.5rem;
+  color: #a5a5a5;
+  padding-bottom: 1em;
+  margin: 0;
+}
+
+.mokuji ol li {
+  margin-bottom: 1em;
+  color: #649ca0;
+}
+
+
 .blog-box__mainContent a {
   transition: 0.2s;
   color: #79e2cf;
   font-weight: bold;
   text-decoration: none;
   border-bottom: 3px solid #79e2cf;
+}
+
+.mokuji a {
+  font-weight: normal;
+  text-decoration: none;
+  transition: 0.2s;
+  color: #649ca0;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.mokuji a:hover {
+  color: #79e2cf;
+  border-bottom: 1px solid #79e2cf;
 }
 
 .blog-box__mainContent p a:hover {
