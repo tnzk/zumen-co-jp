@@ -1,21 +1,25 @@
+---
+# YAML Front Matter
+layout: cate-list
+title: 海外建設業界
+---
+
 <div class="article-card col-12 hidden">
-  {% for post in paginator.posts %}
+  {% for post in site.categories.overseas %}
   <div class="row card-b zoomin">
     <div class="col-4 mp0 hidden">
       <a href="{{ post.url }}">
         <img src="{{ post.image }}" loading="lazy" />
-      </a>
-    </div>
-    <div class="col">
-      <p class="article-card__tags">
-        <a class="inlink" href="{{ site.url }}/{{ post.categories }}.html"
-          >{% if post.jacategories %}
+        <p class="article-card__tags small">
+          {% if post.jacategories %}
           {{ post.jacategories }}
           {% else %}
           {{ post.categories }}
-          {% endif %}</a
-        >
-      </p>
+          {% endif %}
+        </p>
+      </a>
+    </div>
+    <div class="col">
       <a href="{{ post.url }}">
         <p class="article-card__title">
           {{ post.title }}

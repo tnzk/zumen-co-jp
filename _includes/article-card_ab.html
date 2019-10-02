@@ -2,20 +2,34 @@
 <div class="pickup article-card col-12 no-gutters">
   <div class="row">
     <p class="article-card__tags col-12 d-md-none">
-      <a class="inlink" href="{{ site.url }}/blog/{{ post.categories }}.html">{{ post.categories }}</a>
+      <a class="inlink" href="{{ site.url }}/blog/{{ post.categories }}.html"
+        >{% if post.jacategories %}
+        {{ post.jacategories }}
+        {% else %}
+        {{ post.categories }}
+        {% endif %}</a
+      >
     </p>
   </div>
   <div class="row no-gutters">
-    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 order-1 order-md-2">
+    <div
+      class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 order-1 order-md-2"
+    >
       <a href="{{ post.url }}">
         <div class="zoomin">
-          <img src="{{ post.image }}" loading="lazy">
+          <img src="{{ post.image }}" loading="lazy" />
         </div>
       </a>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-7 col-lg col-xl order-2 order-md-1">
       <p class="article-card__tags col-12 d-none d-md-inline-block">
-        <a class="inlink" href="{{ site.url }}/{{ post.categories }}.html">{{ post.categories }}</a>
+        <a class="inlink" href="{{ site.url }}/{{ post.categories }}.html"
+          >{% if post.jacategories %}
+          {{ post.jacategories }}
+          {% else %}
+          {{ post.categories }}
+          {% endif %}</a
+        >
       </p>
       <a href="{{ post.url }}">
         <p class="article-card__title col">

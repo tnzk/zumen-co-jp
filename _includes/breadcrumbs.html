@@ -9,7 +9,13 @@
   {% else %}
   <i class="fas fa-angle-right"></i> <a href="{{ site.url }}/blog/">記事一覧</a>
   <i class="fas fa-angle-right"></i>
-  <a href="{{ site.url }}/test.html">{{ page.categories }}</a>
+  <a href="{{ site.url }}/blog/{{ page.categories }}.html"
+    >{% if page.jacategories %}
+    {{ page.jacategories }}
+    {% else %}
+    {{ page.categories }}
+    {% endif %}</a
+  >
   <i class="fas fa-angle-right"></i> {{ page.title }}
   {% endif %}
 </div>

@@ -6,7 +6,11 @@
         <img src="{{ post.image }}" loading="lazy" />
       </div>
       <p class="article-card__tags">
+        {% if post.jacategories %}
+        {{ post.jacategories }}
+        {% else %}
         {{ post.categories }}
+        {% endif %}
       </p>
       <p class="article-card__title large">
         {{ post.title }}

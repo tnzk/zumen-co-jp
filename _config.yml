@@ -32,3 +32,5 @@ authors:
     icon: /assets/img/blogicon-hamaguchi.jpg
 paginate: 7
 paginate_path: "/blog/page:num"
+livereload: true
+permalink: none
