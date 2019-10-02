@@ -1,0 +1,36 @@
+<div class="author_prf-box">
+  {% if page.author == 'hamaguchi' %}
+  <img
+    src="{{ site.url }}/{{ site.authors.hamaguchi.icon }}"
+    class="prf-icon"
+  />
+  {% elsif page.author == 'hutakami' %}
+  <img src="{{ site.url }}/{{ site.authors.hutakami.icon }}" class="prf-icon" />
+  {% endif %}
+  <div class="prf-name">
+    {% if page.author == 'hamaguchi' %}
+    <p>{{ site.authors.hamaguchi.display_name }}</p>
+    <p>
+      <span>{{ site.authors.hamaguchi.position }}</span>
+    </p>
+    {% elsif page.author == 'hutakami' %}
+    <p>{{ site.authors.hutakami.display_name }}</p>
+    <p>
+      <span>{{ site.authors.hutakami.position }}</span>
+    </p>
+    {% endif %}
+  </div>
+  <div class="prf-text">
+    {% if page.author == 'hamaguchi' %}
+
+    <p>{{ site.authors.hamaguchi.bio }}</p>
+    {% elsif page.author == 'hutakami' %}
+
+    <p>{{ site.authors.hutakami.bio }}</p>
+    {% endif %}
+  </div>
+  <div class="prf-sns">
+    <a href=""><i class="fab fa-fw fa-twitter"></i></a>
+    <a href=""><i class="fab fa-fw fa-facebook-f"></i></a>
+  </div>
+</div>

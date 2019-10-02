@@ -29,31 +29,7 @@ layout: sub
             </a>
             {% endfor %}
           </div>
-          <div class="author-share">
-            <div class="bio col-12">
-              {% if page.author == 'hamaguchi' %}
-              <img
-                src="{{ site.url }}/{{ site.authors.hamaguchi.icon }}"
-                class="author-icon"
-              />
-              {% elsif page.author == 'hutakami' %}
-              <img
-                src="{{ site.url }}/{{ site.authors.hutakami.icon }}"
-                class="author-icon"
-              />
-              {% endif %}
-            </div>
-
-            <div class="bio col-12">
-              {% if page.author == 'hamaguchi' %}
-              <p>{{ site.authors.hamaguchi.display_name }}</p>
-              <p>{{ site.authors.hamaguchi.bio }}</p>
-              {% elsif page.author == 'hutakami' %}
-              <p>{{ site.authors.hutakami.display_name }}</p>
-              <p>{{ site.authors.hutakami.bio }}</p>
-              {% endif %}
-            </div>
-          </div>
+          {% include profile.html %}
         </div>
 
         {% include similar_posts.html %} {% include authors_posts-b.html %}
