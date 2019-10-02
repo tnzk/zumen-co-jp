@@ -22,13 +22,13 @@ authors:
     display_name: 二上 祥
     position: 代表取締役
     email: hutakami@example.com
-    bio: 二上さんのプロフィールテキストです。
-    icon: /assets/img/iconsample.png
+    bio: 株式会社ZUMEN代表取締役CEO。一級建築士、宅地建物取引士。島根県出身。建設業界の現場で10年以上働いてきましたが、世の中IT・AI・働き方改革と、どんどんと新しい時代に入っているのに、まだまだ古い業界であるという事を日々感じています。
+    icon: /assets/img/blogicon-futakami.jpg
   hamaguchi:
     display_name: 濱口 恭平
     position: 取締役
     email: hamaguchi@example.com
-    bio: 濱口さんのプロフィールテキストです。
-    icon: /assets/img/iconsample.png
+    bio: 株式会社ZUMEN取締役CTO。筑波大で計算機科学を学び、スタートアップでエンジニアとしての仕事を始めたことをきっかけにこの業界に入ってから、気づけば10年が経ちました。機械学習・AIの技術で建設業界に変化を巻き起こしたいです。
+    icon: /assets/img/blogicon-hamaguchi.jpg
 paginate: 7
 paginate_path: "/blog/page:num"
