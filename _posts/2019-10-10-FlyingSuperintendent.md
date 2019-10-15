@@ -2,7 +2,7 @@
 layout: post
 title: 「空飛ぶ現場監督」！？　BIM×AI×ドローンでプロジェクト管理を自動化した事例
 author: hamaguchi
-outline: "Flying Superintendent" ＝「空飛ぶ現場監督」……！？厳しい現場監督がふわふわと飛んでいる不思議なイメージが頭に浮かびますが…その正体とは？
+outline:  Flying Superintendent ＝「空飛ぶ現場監督」……！？厳しい現場監督がふわふわと飛んでいる不思議なイメージが頭に浮かびますが…その正体とは？
 categories: BIM
 jacategories: 
 image: ../assets/img/20191010.png
