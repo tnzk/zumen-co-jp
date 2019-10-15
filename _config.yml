@@ -36,3 +36,6 @@ paginate: 7
 paginate_path: "/blog/page:num"
 livereload: true
 permalink: none
+feed_items: 10
+feed_update_period: daily
+feed_update_frequency: 1
