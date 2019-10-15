@@ -1,16 +1,5 @@
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@{{ site.twitter_username }}">
-{% if page.title %}
-  <meta name="twitter:title" content="{{ page.title site.title }} | {{ site.title }}">
-{% else %}
-  <meta name="twitter:title" content="{{ site.title }}">
-{% endif %}
-
-{% if page.excerpt %}
-  <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
-{% else %}
-  <meta name="twitter:description" content="{{ site.description }}">
-{% endif %}
-
-<meta name="twitter:image" content="{{ "/images/logo.png" | prepend: site.baseurl | prepend: site.url }}">
-<meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ page.title }}" />
+<meta name="twitter:description" content="{{ page.outline }}" />
+<meta name="twitter:image" content="{{ site.url
+}}{{ page.image | remove: ".." }}" />
