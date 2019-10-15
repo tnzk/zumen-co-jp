@@ -2,7 +2,7 @@
 layout: post
 title: BIMデータの再利用と民主化── Seeable 社長 Nick Blenkarn との対談
 author: hamaguchi
-outline: イギリスのオンラインメディア"BIM+"から、BIM+ARなテーマの記事のご紹介です。設計段階で構築した三次元点群情報（ドローンで3Dスキャン等で取得）を使ってVR/ARなどに活用する事業を展開するイギリスの会社Seeableについての記事です。
+outline: イギリスのオンラインメディアから、BIM+ARなテーマの記事のご紹介です。設計段階で構築した三次元点群情報（ドローンで3Dスキャン等で取得）を使ってVR/ARなどに活用する事業を展開するイギリスの会社Seeableについての記事です。
 categories: BIM
 image: ../assets/img/20190905.jpg
 tags: VR/AR
