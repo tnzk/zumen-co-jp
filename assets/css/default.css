@@ -831,6 +831,10 @@ h2.mokuji_title {
   font-size: 2rem;
 }
 
+.grayout {
+  color: #efefef;
+}
+
 .prf-sns a {
   display: inline-block;
   border-bottom: 0;

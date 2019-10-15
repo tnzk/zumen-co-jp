@@ -30,7 +30,17 @@
     {% endif %}
   </div>
   <div class="prf-sns">
-    <a href=""><i class="fab fa-fw fa-twitter"></i></a>
-    <a href=""><i class="fab fa-fw fa-facebook-f"></i></a>
+    {% if page.author == 'hamaguchi' %}
+    <a href="{{ site.authors.hamaguchi.twitter }}" target="_blank"><i class="fab fa-fw fa-twitter"></i></a>
+    <a href="{{ site.authors.hamaguchi.facebook }}" target="_blank"<i class="fab fa-fw fa-facebook-f"></i></a>
+    {% elsif page.author == 'hutakami' %}
+    <!-- <a href="{{ site.authors.hutakami.twitter }}" target="_blank"> -->
+      <i class="fab fa-fw fa-twitter grayout"></i>
+      <!-- </a> -->
+    <!-- <a href="{{ site.authors.hutakami.facebook }}" target="_blank"> -->
+      <i class="fab fa-fw fa-facebook-f grayout"></i>
+      <!-- </a> -->
+    {% endif %}
+
   </div>
 </div>
