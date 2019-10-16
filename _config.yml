@@ -15,6 +15,7 @@ highlighter: rouge
 plugins:
   - jekyll-lunr-js-search
   - jekyll-paginate
+  - jekyll-feed
 image: /assets/img/sample.jpg
 authors:
   output: true
