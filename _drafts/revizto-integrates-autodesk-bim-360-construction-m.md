@@ -5,7 +5,7 @@ author: hutakami
 outline:
 categories: BIM
 jacategories:
-image: ../assets/img/20191025_0.jpg
+image: ../assets/img/20191030_0.jpg
 tags:
   - 課題管理ソフト
 ---
@@ -30,7 +30,7 @@ ZUMEN の二上です。
 
 ## 1. 建設業向け課題管理ソフトの Revizto とは？
 
-[![Revizto](../../../../assets/img/20191025_1.jpg)](https://revizto.com/en/features){:target="\_blank"}
+[![Revizto](../../../../assets/img/20191030_1.jpg)](https://revizto.com/en/features){:target="\_blank"}
 [https://revizto.com/en/features](https://revizto.com/en/features){:target="\_blank"}
 
 建設業では様々な課題が日々発生しており、課題の解決に多くの時間を費やしています。  
@@ -67,7 +67,7 @@ Revizto をインストールしていないユーザも、64bit 版の Windows 
 
 BIM360 はご存じの方も多いかと思いますが、米 Autodesk 社が提供するサービスで、Revit のデーターをクラウド経由で同期することなどができるソフトです。
 
-[![BIM360](../../../../assets/img/20191025_2.jpg)](https://www.autodesk.co.jp/products/bim-360-design/overview){:target="\_blank"}
+[![BIM360](../../../../assets/img/20191030_2.jpg)](https://www.autodesk.co.jp/products/bim-360-design/overview){:target="\_blank"}
 [https://www.autodesk.co.jp/products/bim-360-design/overview](https://www.autodesk.co.jp/products/bim-360-design/overview){:target="\_blank"}
 
 Revizto との連携によって、次のようなことが可能になります。
