@@ -2,7 +2,7 @@
 layout: post
 title: BIMの基本をオンラインで学べるサイト「Vectorworks University」
 author: hamaguchi
-outline:
+outline: 複雑さ・高機能さから、敷居が高いというイメージがあるBIM。この課題を払拭するため、Vectorworks 社がオンライン学習サイト「Vectorworks University」を発表しました。
 categories: BIM
 jacategories:
 image: ../assets/img/20191025_0.jpg
