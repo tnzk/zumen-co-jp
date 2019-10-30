@@ -2,7 +2,7 @@
 layout: post
 title: 建設業向け課題管理ソフトのReviztoが、BIM360との連携をサポート
 author: hutakami
-outline:
+outline: 課題の管理を行いたいという現場のニーズは日本でも共通だと思います。 BIM と連携できると具体的に何が出来るようになるのか、ご紹介していきます。
 categories: BIM
 jacategories:
 image: ../assets/img/20191030_0.jpg
