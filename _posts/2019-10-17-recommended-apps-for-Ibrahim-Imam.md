@@ -5,7 +5,7 @@ author: hutakami
 outline: イギリスの建設会社PlanRadarの共同創業者兼社長brahim Imam氏が紹介する建設現場関係者必携Webアプリ5本のご紹介です。
 categories: overseas
 jacategories: 海外建設業界
-image: ../assets/img/20191017_0.jpg
+image: ../assets/img/20191017_0.png
 tags:
   - 海外
   - 建設現場
