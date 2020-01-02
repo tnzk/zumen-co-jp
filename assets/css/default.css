@@ -44,7 +44,7 @@ ul {
   font-feature-settings: "palt";
   letter-spacing: 0.1rem;
   line-height: 1.75;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 div.article-card+div.article-card,
@@ -696,15 +696,6 @@ dd {
   padding-top: 80px;
 }
 
-.article ul li {
-  color: #333;
-  text-align: left;
-  line-height: 2.5em;
-}
-
-.article ul {
-  margin-bottom: 2em;
-}
 
 
 
@@ -750,6 +741,18 @@ h2.mokuji_title {
   color: #79e2cf;
   border-bottom: 1px solid #79e2cf;
 }
+.article ul li,
+.article ol li {
+  color: #333;
+  text-align: left;
+  line-height: 2.5em;
+}
+
+.article ul,
+.article ol {
+  margin-bottom: 2em;
+}
+
 
 .blog-box__mainContent p a:hover,
 .article p a:hover,
