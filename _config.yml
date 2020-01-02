@@ -33,8 +33,8 @@ authors:
     icon: /assets/img/blogicon-hamaguchi.jpg
     twitter: https://twitter.com/tnzk
     facebook: https://ja-jp.facebook.com/tnzk.marge
-paginate: 7
-paginate_path: "/blog/page:num"
+paginate: 30
+paginate_path: "/blog/:num"
 livereload: true
 permalink: none
 feed_items: 10
