@@ -6,7 +6,7 @@ title: スマート模型 | 株式会社ZUMEN
 <div class="head">
   <div class="title">
   </div>
-  <div class="description text-md text-white">
+  <div class="description text-desc text-white">
     スマート模型は、2次元の建築図面を立ち上げ、<br>
     Google earthで景観確認ができるソリューションです。
   </div>
@@ -85,8 +85,8 @@ title: スマート模型 | 株式会社ZUMEN
         <img height="120" width="120" class="card-img" src="assets/img/product/smartmokei/house.svg">
       </div>
       <div class="col-12 col-md-9 pl-5">
-        <div class="text-bg text-white">
-          20,000円(税抜)/1件*につき
+        <div class="text-bg text-white price text-normal">
+          20,000<span class="text-lg">円</span><span class="text-md">(税抜)</span><span class="text-lg">/1件*につき</span>
         </div>
         <div class="text-sm text-white">
           * 2階建ての一軒家、10階建てのマンション程度を想定。<br>
@@ -231,61 +231,71 @@ title: スマート模型 | 株式会社ZUMEN
     スマート模型 ご利用フォーム
   </h2>
   <hr class="hr-bold-blue">
-  <div class="mini-box height-md">
-    <img src="assets/img/product/smartmokei/up-form-mail.svg">
-  </div>
-  <div class="mini-box text-sm">
-    以下のフォームに必要事項をご入力の上、お申し込みください。
-  </div>
-  <div class="mini-box"></div>
-  <form>
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <div class="text-form">
-          意匠図PDF
-        </div>
-        <div id="dropImages" class="dz-message dropzone">
-          <div class="fallback"></div>
-        </div>
-      </div>
-      <div class="pr-0 col-12 col-md-6 row">
-        <div class="pl-1 pr-3 col-7 col-md-6">
-          <div class="text-form">
-            郵便番号
-          </div>
-          <input type="text" class="form-control expand">
-        </div>
-        <div class="pr-1 col-7 col-md-6">
-          <div class="text-form">
-            都道府県
-          </div>
-          <input type="text" class="form-control expand">
-        </div>
-        <div class="px-1 col-12">
-          <div class="text-form">
-            市町村区以降の住所(番地含む)
-          </div>
-          <input type="text" class="form-control expand">
-        </div>
-        <div class="px-1 col-12">
-          <div class="text-form">
-            メールアドレス
-          </div>
-          <input type="email" class="form-control expand">
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="terms">
-          ここに利用規約の長い文章が入ります
-        </div>
-      </div>
-      <div class="form-check col-12 text-center">
-        <input type="checkbox" class="form-check-input mt-2" id="agree">
-        <label class="text-form ml-3" for="agree">同意する</label>
-      </div>
-      <button type="submit" class="submit-button"></button>
+  <div class="mx-2">
+    <div class="mini-box height-md">
+      <img src="assets/img/product/smartmokei/up-form-mail.svg">
     </div>
-  </form>
+    <div class="mini-box text-sm">
+      以下のフォームに必要事項をご入力の上、お申し込みください。
+    </div>
+    <div class="mini-box"></div>
+    <form>
+      <div class="row">
+        <div class="col-12 col-md-6 d-flex flex-column">
+          <div class="text-form">
+            意匠図PDF
+          </div>
+          <label for="file_zip" class="upload-form">
+            <input type="file" id="file_zip" class="upload-form-input">
+          </label>
+        </div>
+        <div class="col-12 col-md-6 row ml-0">
+          <div class="pl-1 pr-3 col-7 col-md-6 d-flex flex-column">
+            <div class="text-form">
+              郵便番号
+            </div>
+            <input type="text" class="form-control expand">
+          </div>
+          <div class="pl-1 pr-1 col-7 col-md-6 d-flex flex-column">
+            <div class="text-form">
+              都道府県
+            </div>
+            <input type="text" class="form-control expand">
+          </div>
+          <div class="px-1 col-12 d-flex flex-column">
+            <div class="text-form">
+              市町村区以降の住所(番地含む)
+            </div>
+            <input type="text" class="form-control expand">
+          </div>
+          <div class="px-1 col-12 d-flex flex-column">
+            <div class="text-form">
+              メールアドレス
+            </div>
+            <input type="email" class="form-control expand">
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="terms">
+            ここに利用規約の長い文章が入ります
+          </div>
+        </div>
+        <div class="form-check col-12 text-center">
+          <input type="checkbox" class="form-check-input mt-2" id="agree">
+          <label class="text-form ml-3" for="agree">同意する</label>
+        </div>
+        <div class="mini-box"></div>
+        <div class="mini-box">
+          <div class="btn-wrapper-submit">
+            <button type="submit" class="btn-submit"></button>
+          </div>
+        </div>
+        <div class="text-xs px-3 mini-box mx-2">
+          ※当社は、本件秘密情報を本件業務の遂行に必要最小限度の当社の役員または関係従業員にのみ開示し、書面による貴社の事前の承諾なくしては、その他の第三者に開示または漏洩しません。当社は、本件秘密情報を知得する当社の役員または関係従業員（本件秘密情報知得後の退職者を含みます。）の行為をすべて当社の行為とみなし、当該利用者に対し、一切の責を負います。
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 <div class="inner-box bg-darkgray">
   <div class="row justify-content-center align-items-center">
@@ -293,313 +303,20 @@ title: スマート模型 | 株式会社ZUMEN
     <div class="col-2 col-md-2 text-center p-0 mx-4"><img class="arrow-fix" src="assets/img/product/smartmokei/arrow2.svg"></div>
     <div class="col-4 col-md-4"><img width="100" src="assets/img/product/smartmokei/house2.svg"></div>
   </div>
+  <div class="mini-box"></div>
+  <div class="btn-wrapper-fix">
+    <a href="#" class="btn-fix">
+
+    </a>
+  </div>
 </div>
-<style>
-  .arrow-fix {
-    margin: auto;
-    width: 42px;
-  }
-  @media (max-width: 575.98px) {
-    .arrow-fix {
-      width: 35px;
-    }
-  }
-  .expand {
-    height: 34px;
-    border: 1px solid #AFAFAF;
-    box-sizing: border-box;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-  }
-  .terms {
-    height: 350px;
-    border: 2px lightgray solid;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding: 10px;
-  }
-  span.collapse:not(.show) {
-    transition-duration: 0;
-    display: block!important;
-    transform: rotate(-45deg);
-  }
-  .plus .collapse .multi-collapse .show:after {
-    transition-duration: 0;
-    transform: initial;
-  }
-  html {
-    font-family: "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium" -apple-system, BlinkMacSystemFont sans-serif;
-  }
-  .faq-row {
-    width: 100%;
-  }
-  .faq-row .row {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .faq-row .row .col-1 {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .card {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 400px;
-    height: 530px;
-  }
-  @media (max-width: 575.98px) {
-    .card {
-      width: 350px;
-      height: 466px;
-    }
-  }
-  .card-img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  .card-text {
-    padding: 5%;
-  }
-  .card-text h3 {
-    padding-bottom: 5%;
-  }
-  .bg-gray {
-    background: #F0F5FA;
-  }
-  .bg-blue {
-    background: #007EA7;
-  }
-  .bg-darkgray {
-    background: #E8E8E8;
-  }
-  .height-icon {
-    max-height: 16px;
-  }
-  .height-md {
-    max-height: 250px;
-  }
-  .box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 80px 10vw;
-  }
-  .inner-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 10vw;
-  }
-  .faq-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 80px 10vw 0;
-  }
-  @media (max-width: 575.98px) {
-    .faq-box {
-      padding: 40px 0 0;
-    }
-  }
-  .mini-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25px 10vw;
-  }
-  @media (max-width: 575.98px) {
-    .mini-box {
-      padding: 10px 0;
-    }
-  }
-  .text-blue {
-    color: #007EA7;
-  }
-  .text-white {
-    color: #FFFFFF;
-  }
-  hr {
-    width: 100%;
-  }
-  hr.hr-bold {
-    height: 3px;
-    margin: 8px;
-    background-color: #FFFFFF;
-  }
-  hr.hr-bold-blue {
-    height: 3px;
-    margin: 8px;
-    background-color: #007EA7;
-  }
-  .text-sm {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 175%;
-  }
-  .text-md {
-    font-size: 20px;
-    line-height: 175%;
-  }
-  .text-faq {
-    font-size: 25px;
-    font-weight: bold;
-    line-height: 150%;
-    color: #007EA7;
-  }
-  .text-bg {
-    font-size: 35px;
-    font-weight: bold;
-    line-height: 150%;
-  }
-  .text-form {
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 175%;
-    font-family: Roboto;
-  }
-  .text-center {
-    text-align: center;
-  }
-  h3 {
-    font-size: 22px;
-    line-height: 150%;
-    font-weight: bold;
-  }
-  h2 {
-    text-align: center;
-    font-size: 35px;
-    line-height: 150%;
-    color: #007EA7;
-  }
-  .sm-only {
-    display: none;
-  }
-  @media (max-width: 575.98px) {
-    .sm-only {
-      display: block;
-    }
-    .md-only {
-      display: none;
-    }
-    .box { 
-      padding: 30px 4px;
-    }
-    .inner-box {
-      padding: 20px 8px;
-    }
-    .text-sm {
-      font-size: 12px;
-    }
-    .text-md {
-      font-size: 16px;
-    }
-    .text-faq {
-      font-size: 20px;
-    }
-    .text-bg {
-      font-size: 30px;
-    }
-    h3 {
-      font-size: 17px;
-    }
-    h2 {
-      font-size: 20px;
-    }
-  }
-  .head {
-    display: flex;
-    flex-direction: column;
-    padding: 10% 10% 0;
-
-    width: 100%;
-    height: 500px;
-
-    background: url('assets/img/product/smartmokei/head.png'), linear-gradient(90deg, rgba(0, 68, 141, 0.5) 0.31%, rgba(68, 159, 255, 0) 98.91%);
-    background-size: cover;
-    background-position: center center;
-    background-blend-mode: normal, color, color-dodge;
-  }
-
-  .title {
-    display: block;
-    background: url('assets/img/product/smartmokei/title.svg');
-    width: 300px;
-    height: 63px;
-    background-size: cover;
-  }
-
-  .description {
-    margin-top: 60px;
-    max-width: 503px;
-  }
-
-  .btn-wrapper {
-    width: 100%;
-    margin-top: 50px;
-    position: relative;
-    max-width: 378px;
-  }
-  @media (max-width: 575.98px) {
-    .btn-wrapper { 
-      margin-top: auto;
-      margin-bottom: 30px;
-    } 
-  }
-  .btn-wrapper:before {
-    content: "";
-    display: block;
-    padding-top: 21%;
-  }
-  .btn-wrapper-fluid {
-    width: 100%;
-    margin-top: 50px;
-    position: relative;
-    max-width: 378px;
-  }
-  @media (max-width: 575.98px) {
-    .btn-wrapper-fluid { 
-      width: 90%;
-      margin-top: 30px;
-    } 
-  }
-  .btn-wrapper-fluid:before {
-    content: "";
-    display: block;
-    padding-top: 21%;
-  }
-  .use {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('assets/img/product/smartmokei/use.svg');
-    background-size: contain;
-  }
-</style>
-
 <script>
-  var droppedImages = []
-  Dropzone.autoDiscover = false // [1]
-  Dropzone.options.dropImages = { // [2]
-    autoProcessQueue: false, // 重要
-    addRemoveLinks: true,
-    dictRemoveFile: '削除',
-    dictDefaultMessage: '圧縮ファイル(.zip)をアップロードできます。'
-  }
-  $(function() { // 折角なので使う
-    var myDropzone = new Dropzone('div#dropImages', { url: 'dummy'})
-    myDropzone.on("addedfile", function(file) { // [3] 画像追加
-      droppedImages.push(file) // Dropzone外に渡せる。あとはお好きに
-    })
-    myDropzone.on("removedfile", function(file) { // [4] 画像削除
-      var index = droppedImages.indexOf(file)
-      if (index >= 0) { droppedImages.splice(index, 1) }
-    })
-  })
+  // form preview sample
+  // $('#myImage').on('change', function (e) {
+  //   var reader = new FileReader();
+  //   reader.onload = function (e) {
+  //       $("#preview").attr('src', e.target.result);
+  //   }
+  //   reader.readAsDataURL(e.target.files[0]);
+  // });
 </script>

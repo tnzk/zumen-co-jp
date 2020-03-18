@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-{% include product/head.html %}
+{% include product_head.html %}
   <link
     rel="stylesheet"
     href="{{ '/assets/css/product.css' | relative_url }}"
@@ -11,6 +11,7 @@
     {{content}}
   </div>
 </div>
+{% include product_footer.html %}
 </body>
 
 </html>

@@ -511,7 +511,7 @@ div.row>#top-head__text {
   }
 }
 
-footer {
+footer.default {
   background: url("../img/sample3.jpg");
   height: 100px;
   background-size: cover;
@@ -520,7 +520,7 @@ footer {
   margin: 0;
 }
 
-footer::after {
+footer.default::after {
   content: "";
   background-color: rgba(121, 226, 207, 0.95);
   position: absolute;
@@ -530,7 +530,7 @@ footer::after {
   bottom: 0;
 }
 
-footer>* {
+footer.default>* {
   padding: 1rem 0;
   position: relative;
   z-index: 1;
