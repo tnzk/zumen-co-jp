@@ -1,4 +1,16 @@
+.close-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 15px;
+  top: 15px;
+  background: url('../img/product/smartmokei/close.svg') no-repeat;
+  background-size: cover;
+}
 
+button:focus {
+	outline:0;
+}
   .face {
     width: 300px;
     height: 300px;
@@ -11,18 +23,19 @@
     height: 42px;
     background-size: cover;
   }
-  @media (max-width: 575.98px) {
-    footer.product {
-      padding: 25px 10% 0;
-    }
-  }
   footer.product {
     display: flex;
     flex-direction: column;
     padding: 50px 10% 0;
     background: linear-gradient(0deg, #4A4A4A, #4A4A4A), url("../img/product_footer.png");
     background-blend-mode: multiply, normal;
+    background-position: center center;
     background-size: cover;
+  }
+  @media (max-width: 575.98px) {
+    footer.product {
+      padding: 15px 6% 0;
+    }
   }
 
   footer.product>* {
@@ -31,7 +44,6 @@
     z-index: 1;
     color: #fff;
   }
-
 
   .upload-form {
     width: 100%;
@@ -61,6 +73,7 @@
   }
   .price {
     margin-bottom: 15px;
+    white-space: nowrap;
   }
   @media (max-width: 575.98px) {
     .price {
@@ -70,6 +83,10 @@
   .arrow-fix {
     margin: auto;
     width: 42px;
+  }
+  .arrow-fix-black {
+    margin: auto;
+    width: 35px;
   }
   @media (max-width: 575.98px) {
     .arrow-fix {
@@ -83,25 +100,27 @@
     box-sizing: border-box;
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+    font-size: 16px;
   }
   .terms {
-    height: 350px;
+    height: 250px;
     border: 2px lightgray solid;
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 10px;
+    overflow: auto;
   }
   span.collapse:not(.show) {
     transition-duration: 0;
     display: block!important;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) translateX(-0.8px) translateY(-0.8px);
   }
   .plus .collapse .multi-collapse .show:after {
     transition-duration: 0;
     transform: initial;
   }
-  html {
-    font-family: "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium" -apple-system, BlinkMacSystemFont sans-serif;
+  body.product {
+    font-family: "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", -apple-system, BlinkMacSystemFont, sans-serif;
   }
   .faq-row {
     width: 100%;
@@ -120,17 +139,20 @@
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 400px;
-    height: 530px;
+    height: 100%;
   }
   @media (max-width: 575.98px) {
     .card {
       width: 350px;
-      height: 466px;
+      height: 100%;
     }
   }
   .card-img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
   }
   .card-text {
     padding: 5%;
@@ -149,6 +171,9 @@
   }
   .height-icon {
     max-height: 16px;
+  }
+  .height-house {
+    max-height: 130px;
   }
   .height-md {
     max-height: 250px;
@@ -196,18 +221,31 @@
   .text-white {
     color: #FFFFFF;
   }
+  .text-black {
+    color: #000000!important;
+  }
   hr {
     width: 100%;
   }
+  @media (max-width: 575.98px) {
+    hr {
+      width: 96%;
+    }
+  }
   hr.hr-bold {
     height: 3px;
-    margin: 8px;
+    margin: 8px auto;
     background-color: #FFFFFF;
   }
   hr.hr-bold-blue {
     height: 3px;
-    margin: 8px;
+    margin: 8px auto;
     background-color: #007EA7;
+  }
+  hr.hr-bold-black {
+    height: 3px;
+    margin: 8px auto;
+    background-color: black;
   }
   .text-xs {
     font-size: 11px;
@@ -218,6 +256,11 @@
     font-size: 15px;
     font-weight: 500;
     line-height: 175%;
+  }
+  .text-result {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 150%;
   }
   .text-desc {
     font-size: 20px;
@@ -236,6 +279,9 @@
     font-weight: bold;
     line-height: 150%;
     color: #007EA7;
+  }
+  #stripeModal > div > div.modal-round {
+    border-radius: 10px!important;
   }
   .text-bg {
     font-size: 35px;
@@ -259,11 +305,18 @@
   h2 {
     text-align: center;
     font-size: 35px;
+    font-weight: bold;
     line-height: 150%;
     color: #007EA7;
   }
+  h2.black {
+    color: black;
+  }
   .sm-only {
     display: none;
+  }
+  .text-sm-center {
+    text-align: left;
   }
   @media (max-width: 575.98px) {
     .sm-only {
@@ -297,14 +350,13 @@
       font-size: 17px;
     }
     h2 {
-      font-size: 20px;
+      font-size: 25px;
     }
   }
   .head {
     display: flex;
     flex-direction: column;
     padding: 100px 10% 0;
-
     width: 100%;
     height: 500px;
 
@@ -322,9 +374,10 @@
   .title {
     display: block;
     background: url('../img/product/smartmokei/title.svg') no-repeat;
-    width: 300px;
+    max-width: 300px;
     height: 63px;
-    background-size: cover;
+    width: 100%;
+    background-size: contain;
   }
 
   .description {
@@ -332,84 +385,217 @@
     max-width: 503px;
   }
 
-  .btn-wrapper {
-    width: 100%;
-    margin-top: 50px;
-    position: relative;
-    max-width: 378px;
+  .btn-use {
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+
+    max-width: 376.88px;;
+    min-width: 300px;
+    height: 78px;
+
+    background: #FAEA5B;
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
-  @media (max-width: 575.98px) {
-    .btn-wrapper { 
-      margin-top: auto;
-      margin-bottom: 30px;
-    } 
-  }
-  .btn-wrapper:before {
-    content: "";
-    display: block;
-    padding-top: 21%;
-  }
-  .btn-wrapper-fluid {
-    width: 100%;
-    margin-top: 50px;
-    position: relative;
-    max-width: 378px;
-  }
-  @media (max-width: 575.98px) {
-    .btn-wrapper-fluid { 
-      width: 90%;
-      margin-top: 30px;
-    } 
-  }
-  .btn-wrapper-fluid:before {
-    content: "";
-    display: block;
-    padding-top: 21%;
-  }
-  .use {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../img/product/smartmokei/use.svg') no-repeat;
-    background-size: contain;
-  }
-  .btn-wrapper-submit {
-    width: 100%;
-    position: relative;
-    max-width: 201px;
-  }
-  .btn-wrapper-submit:before {
-    content: "";
-    display: block;
-    padding-top: 34.67%;
+  .btn-use-align {
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+
+    max-width: 376.88px;;
+    min-width: 300px;
+    height: 78px;
+
+    background: #FAEA5B;
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   .btn-submit {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../img/product/smartmokei/button-submit.svg') no-repeat;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+
+    max-width: 201.88px;
+    min-width: 153.12px;
+    height: 70px;
+
+    background: #FAEA5B;
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .btn-white {
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    
+    position: static;
+    width: 276.12px;
+    height: 53px;
+    
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+  }
+  .btn-white-big {
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    
+    position: static;
+    max-width: 374.88px;
+    min-width: 301.5px;
+    height: 68px;
+    
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+  }
+  .btn-arrow-sub {
+    background: url('../img/product/smartmokei/arrow2-black.svg') no-repeat;
     background-size: contain;
+    background-position: center center;
+    width: 13.12px;
+    height: 15px;
+    margin: 20px 0px;
   }
-  .btn-wrapper-fix {
-    width: 100%;
-    position: relative;
-    max-width: 276.5px;
-  }
-  .btn-wrapper-fix:before {
-    content: "";
-    display: block;
-    padding-top: 20%;
-  }
-  .btn-fix {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../img/product/smartmokei/button-fix.svg') no-repeat;
+  
+  .btn-arrow {
+    background: url('../img/product/smartmokei/arrow.svg') no-repeat;
     background-size: contain;
+    background-position: center center;
+    width: 21.88px;
+    height: 25px;
+    margin: 15px 0px;
+  }
+
+  .btn-arrow-mini {
+    background: url('../img/product/smartmokei/arrow.svg') no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 17.5px;
+    height: 20px;
+  }
+  
+  @media (max-width: 575.98px) {
+    .btn-use {
+      height: 60px;
+      position: relative;
+    }
+    .btn-use-align {
+      height: 60px;
+      position: relative;
+      left:50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+    }
+    .btn-submit {
+      height: 53px;
+    }
+    .btn-white-big {
+      height: 50px;
+    }
+    .btn-arrow {
+      width: 13.12px;
+      height: 15px;
+    }
+  }
+  .text-btn-use {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    color: black!important;
+  }
+  .text-btn-submit {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    color: black!important;
+  }
+  .btn-use:hover {
+    text-decoration: none;
+  }
+  .btn-submit:hover {
+    text-decoration: none;
+  }
+  .btn-white:hover {
+    text-decoration: none;
+  }
+  .btn-white-big {
+    text-decoration: none;
+  }
+  @media (max-width: 575.98px) {
+    .text-btn-use {
+      font-size: 20px;
+    }
+    .text-btn-submit {
+      font-size: 15px;
+    }
+  }
+  .text-btn-white {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    color: black!important;
+  }
+  @media (max-width: 575.98px) {
+    .xs-bottom {
+      margin-bottom: 30px;
+      margin-top: auto!important;
+    }
+  }
+  .xs-bottom {
+    margin-top: 30px;
+  }
+  .xs-only {
+    display :none;
+  }
+  @media (max-width: 575.98px) {
+    .xs-only {
+      display: block;
+    }
+  }
+  .StripeElement {
+    box-sizing: border-box;
+  
+    height: 40px;
+  
+    padding: 10px 12px;
+  
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+  
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
+  
+  .StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+  }
+  
+  .StripeElement--invalid {
+    border-color: #fa755a;
+  }
+  
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
   }
