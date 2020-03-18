@@ -4,23 +4,25 @@
     height: 300px;
     margin: auto;
   }
-
-  footer.product {
-    background: url("../img/product_footer.png");
+  .footer-title {
+    display: block;
+    background: url('../img/product/smartmokei/title.svg') no-repeat;
+    width: 200px;
+    height: 42px;
     background-size: cover;
-    background-position: 50%;
-    position: relative;
-    margin: 0;
   }
-
-  footer.product::after {
-    content: "";
-    background-color: rgba(121, 226, 207, 0.95);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  @media (max-width: 575.98px) {
+    footer.product {
+      padding: 25px 10% 0;
+    }
+  }
+  footer.product {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 10% 0;
+    background: linear-gradient(0deg, #4A4A4A, #4A4A4A), url("../img/product_footer.png");
+    background-blend-mode: multiply, normal;
+    background-size: cover;
   }
 
   footer.product>* {
