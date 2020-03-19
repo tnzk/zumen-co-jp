@@ -1,0 +1,18 @@
+<script src="https://js.stripe.com/v3"></script>
+<div id="error-message"></div>
+<script>
+(function() {
+  var stripe = Stripe('pk_test_Z8QA5lWF1kdejOQuOxBoptuM00f9Fk1cii');
+  stripe.redirectToCheckout({
+    items: [{sku: 'sku_GwCJHlDcdZ4ceC', quantity: 1}],
+    successUrl: 'http://localhost:4000/smartfix.html#thanks',
+    cancelUrl: 'http://localhost:4000/smartfix.html#cancel',
+  })
+  .then(function (result) {
+    if (result.error) {
+      var displayError = document.getElementById('error-message');
+      displayError.textContent = result.error.message;
+    }
+  });
+})();
+</script>

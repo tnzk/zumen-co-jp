@@ -1,3 +1,18 @@
+.alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  z-index: 10;
+}
+
+.alert > .close {
+  top: 10px!important;
+}
+
+
 .close-button {
   position: absolute;
   width: 40px;
@@ -280,7 +295,7 @@ button:focus {
     line-height: 150%;
     color: #007EA7;
   }
-  #stripeModal > div > div.modal-round {
+  #thanksModal > div > div.modal-round {
     border-radius: 10px!important;
   }
   .text-bg {
@@ -536,7 +551,7 @@ button:focus {
   .btn-white:hover {
     text-decoration: none;
   }
-  .btn-white-big {
+  .btn-white-big:hover {
     text-decoration: none;
   }
   @media (max-width: 575.98px) {

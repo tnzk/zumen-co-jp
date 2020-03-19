@@ -2,6 +2,12 @@
 layout: product
 title: スマート模型 | 株式会社ZUMEN
 ---
+<div class="alert alert-warning alert-dismissible" role="alert" id="cancelAlert" style="display: none;">
+  <div>キャンセルしました。</div>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
 <div class="head">
   <div class="title">
   </div>
@@ -243,14 +249,14 @@ title: スマート模型 | 株式会社ZUMEN
     <div class="mini-box text-sm mt-0 pt-0 mb-2">
       以下のフォームに必要事項をご入力の上、お申し込みください。
     </div>
-    <form>
+    <form class="formrun" action="https://form.run/api/v1/r/0rg360nw21hh9e6ivcph1iil" method="post">
       <div class="row">
         <div class="col-12 col-md-6 d-flex flex-column">
           <div class="text-form">
             意匠図PDF
           </div>
           <label for="file_zip" class="upload-form">
-            <input type="file" id="file_zip" class="upload-form-input">
+            <input name="意匠図" type="file" id="file_zip" class="upload-form-input" data-formrun-required>
           </label>
         </div>
         <div class="col-12 col-md-6 row ml-0">
@@ -258,25 +264,25 @@ title: スマート模型 | 株式会社ZUMEN
             <div class="text-form">
               郵便番号
             </div>
-            <input type="text" class="form-control expand">
+            <input name="郵便番号" type="text" class="form-control expand">
           </div>
           <div class="pl-1 pr-1 col-7 col-md-6 d-flex flex-column">
             <div class="text-form">
               都道府県
             </div>
-            <input type="text" class="form-control expand">
+            <input name="都道府県" type="text" class="form-control expand">
           </div>
           <div class="px-1 col-12 d-flex flex-column">
             <div class="text-form">
               市町村区以降の住所(番地含む)
             </div>
-            <input type="text" class="form-control expand">
+            <input name="住所" type="text" class="form-control expand">
           </div>
           <div class="px-1 col-12 d-flex flex-column">
             <div class="text-form">
-              メールアドレス
+              メールアドレス（※決済画面でも同じメールアドレスを入力してください）
             </div>
-            <input type="email" class="form-control expand mb-2">
+            <input name="メールアドレス" type="email" class="form-control expand mb-2" data-formrun-type="email" data-formrun-required>
           </div>
         </div>
         <div class="col-12">
@@ -319,11 +325,17 @@ title: スマート模型 | 株式会社ZUMEN
           </div>
         </div>
         <div class="form-check col-12 text-center">
-          <input type="checkbox" class="form-check-input mt-2" id="agree">
+          <input name="利用規約への同意" type="checkbox" class="form-check-input mt-2" id="agree" data-formrun-required>
           <label class="text-form ml-3" for="agree">同意する</label>
         </div>
+        <!-- ボット投稿をブロックするためのタグ -->
+        <div class="_formrun_gotcha">
+          <style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
+          <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+          <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+        </div>
         <div class="mini-box mt-sm-2 mb-sm-4">
-          <button type="button" class="btn-submit" data-toggle="modal" data-target="#stripeModal">
+          <button type="submit button" class="btn-submit">
             <div class="text-btn-submit">
               決済画面へ
             </div>
@@ -353,7 +365,7 @@ title: スマート模型 | 株式会社ZUMEN
     <div class="btn-arrow-sub ml-4"></div>
   </a>
 </div>
-<div class="modal fade" id="stripeModal" tabindex="-1" role="dialog" aria-labelledby="stripeModalLabel" aria-hidden="true">
+<div class="modal fade" id="thanksModal" tabindex="-1" role="dialog" aria-labelledby="stripeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content modal-round">
       <div class="modal-body">
@@ -397,32 +409,13 @@ title: スマート模型 | 株式会社ZUMEN
     </div>
   </div>
 </div>
-<!-- <form action="/charge" method="post" id="payment-form">
-  <div class="form-row">
-    <label for="card-element">
-      Credit or debit card
-    </label>
-    <div id="card-element">
-    </div>
-
-    <div id="card-errors" role="alert"></div>
-  </div>
-
-  <button>Submit Payment</button>
-</form> -->
-<!-- <div class="modal fade" id="stripeModal" tabindex="-1" role="dialog" aria-labelledby="stripeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content modal-round">
-      <div class="modal-body">
-        <button type="button" class="close-button" data-dismiss="modal" aria-label="Close"></button>
-        <div class="box py-3">
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
 <script>
+  console.warn(location.href.slice(-6))
+  if (location.href.slice(-6) === 'thanks') {
+    $('#thanksModal').modal('show')
+  } else if (location.href.slice(-6) === 'cancel') {
+    $('#cancelAlert').show()
+  }
   // form preview sample
   // $('#file_zip').on('change', function (e) {
   //   var reader = new FileReader();
@@ -432,77 +425,5 @@ title: スマート模型 | 株式会社ZUMEN
   //   reader.readAsDataURL(e.target.files[0]);
   // });
 </script>
-<script src="https://js.stripe.com/v3/"></script>
 
-<script>
-// Create a Stripe client.
-var stripe = Stripe('pk_test_AtYjx7GaCYb4bLjI7lrTmwae00O6Rr0e4u');
-
-// Create an instance of Elements.
-var elements = stripe.elements();
-
-// Custom styling can be passed to options when creating an Element.
-// (Note that this demo uses a wider set of styles than the guide below.)
-var style = {
-  base: {
-    color: '#32325d',
-    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-    fontSmoothing: 'antialiased',
-    fontSize: '16px',
-    '::placeholder': {
-      color: '#aab7c4'
-    }
-  },
-  invalid: {
-    color: '#fa755a',
-    iconColor: '#fa755a'
-  }
-};
-
-// Create an instance of the card Element.
-var card = elements.create('card', {style: style});
-
-// Add an instance of the card Element into the `card-element` <div>.
-card.mount('#card-element');
-
-// Handle real-time validation errors from the card Element.
-card.addEventListener('change', function(event) {
-  var displayError = document.getElementById('card-errors');
-  if (event.error) {
-    displayError.textContent = event.error.message;
-  } else {
-    displayError.textContent = '';
-  }
-});
-
-// Handle form submission.
-var form = document.getElementById('payment-form');
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  stripe.createToken(card).then(function(result) {
-    if (result.error) {
-      // Inform the user if there was an error.
-      var errorElement = document.getElementById('card-errors');
-      errorElement.textContent = result.error.message;
-    } else {
-      // Send the token to your server.
-      stripeTokenHandler(result.token);
-    }
-  });
-});
-
-// Submit the form with the token ID.
-function stripeTokenHandler(token) {
-  // Insert the token ID into the form so it gets submitted to the server
-  var form = document.getElementById('payment-form');
-  var hiddenInput = document.createElement('input');
-  hiddenInput.setAttribute('type', 'hidden');
-  hiddenInput.setAttribute('name', 'stripeToken');
-  hiddenInput.setAttribute('value', token.id);
-  form.appendChild(hiddenInput);
-
-  // Submit the form
-  form.submit();
-}
-</script>
+<script src="https://sdk.form.run/js/v2/formrun.js"></script>
