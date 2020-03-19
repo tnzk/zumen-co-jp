@@ -13,14 +13,20 @@ body.product > nav > button.burger {
   background: url('../img/product/smartmokei/burger.svg') no-repeat;
 }
 
-.alert {
+.alert-box {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.alert-box > .alert {
   display: flex;
   align-items: center;
   height: 50px;
-  z-index: 10;
 }
 
 .alert > .close {
