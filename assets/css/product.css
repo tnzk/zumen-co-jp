@@ -1,3 +1,18 @@
+body.product > nav {
+  height: 50px;
+  background-color: #F4F4F4!important;
+}
+
+body.product > nav > a:hover {
+  text-decoration: none;
+}
+
+body.product > nav > button.burger {
+  width: 56px;
+  height: 37px;
+  background: url('../img/product/smartmokei/burger.svg') no-repeat;
+}
+
 .alert {
   position: fixed;
   top: 20px;
