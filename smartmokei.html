@@ -251,8 +251,9 @@ title: スマート模型 | 株式会社ZUMEN
     <div class="mini-box text-sm mt-0 pt-0 mb-2">
       以下のフォームに必要事項をご入力の上、お申し込みください。
     </div>
-    <form class="formrun" action="https://form.run/api/v1/r/0rg360nw21hh9e6ivcph1iil" method="post" enctype="multipart/form-data">
+    <form class="formrun h-adr" action="https://form.run/api/v1/r/0rg360nw21hh9e6ivcph1iil" method="post" enctype="multipart/form-data">
       <div class="row">
+        <input type="hidden" class="p-country-name" value="Japan">
         <div class="col-12 col-md-6 d-flex flex-column">
           <div class="text-form">
             意匠図PDF
@@ -275,21 +276,21 @@ title: スマート模型 | 株式会社ZUMEN
             <div class="text-form">
               郵便番号
             </div>
-            <input id="postal_code" name="郵便番号" type="text" class="form-control expand" data-formrun-required data-formrun-class-if-error="has-danger">
+            <input id="postal_code" name="郵便番号" type="text" class="form-control expand p-postal-code" data-formrun-required data-formrun-class-if-error="has-danger">
             <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="郵便番号"><span class="error-message">郵便番号を入力してください。</span></div>
           </div>
           <div class="pl-1 pr-1 col-7 col-md-6 d-flex flex-column">
             <div class="text-form">
               都道府県
             </div>
-            <input id="address1" name="都道府県" type="text" class="form-control expand" data-formrun-required data-formrun-class-if-error="has-danger">
+            <input id="address1" name="都道府県" type="text" class="form-control expand p-region" data-formrun-required data-formrun-class-if-error="has-danger">
             <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="都道府県"><span class="error-message">都道府県を入力してください。</span></div>
           </div>
           <div class="px-1 col-12 d-flex flex-column">
             <div class="text-form">
               市町村区以降の住所(番地含む)
             </div>
-            <input id="address2" name="住所" type="text" class="form-control expand" data-formrun-required data-formrun-class-if-error="has-danger">
+            <input id="address2" name="住所" type="text" class="form-control expand p-locality p-street-address p-extended-address" data-formrun-required data-formrun-class-if-error="has-danger">
             <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="住所"><span class="error-message">市町村区以降の住所を入力してください。</span></div>
           </div>
           <div class="px-1 col-12 d-flex flex-column">
@@ -494,3 +495,4 @@ title: スマート模型 | 株式会社ZUMEN
 </script>
 
 <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
