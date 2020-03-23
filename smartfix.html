@@ -33,7 +33,7 @@ title: スマート模型修正依頼 | 株式会社ZUMEN
   </div>
   <div class="mini-box"></div>
   <div class="mini-box py-0">
-    <a href="#fix-form" class="btn-white-big">
+    <a href="#fix-form" class="btn-white-big button-action">
       <div class="btn-arrow-mini"></div>
       <div class="text-btn-use ml-4">
         データ修正を依頼する！
@@ -60,6 +60,7 @@ title: スマート模型修正依頼 | 株式会社ZUMEN
             メールアドレス(※当該データ注文時のメールアドレス)
           </div>
           <input name="メールアドレス" type="email" class="form-control expand" data-formrun-type="email" data-formrun-required>
+          <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="メールアドレス"><span class="error-message">メールアドレスを入力してください。</span></div>
         </div>
         <div class="col-12">
           <div class="terms">
@@ -101,6 +102,7 @@ title: スマート模型修正依頼 | 株式会社ZUMEN
         <div class="form-check col-12 text-center">
           <input name="利用規約への同意" type="checkbox" class="form-check-input mt-2" id="agree" data-formrun-required>
           <label class="text-form ml-3" for="agree">同意する</label>
+          <div style="margin-top: -5px" data-formrun-show-if-error="利用規約への同意"><span class="error-message">利用規約をよくお読みの上、同意してください。</span></div>
         </div>
         <!-- ボット投稿をブロックするためのタグ -->
         <div class="_formrun_gotcha">
@@ -109,7 +111,7 @@ title: スマート模型修正依頼 | 株式会社ZUMEN
           <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
         </div>
         <div class="mini-box mt-sm-2 mb-sm-4">
-          <button type="submit button" class="btn-submit">
+          <button type="submit button" class="btn-submit button-action">
             <div class="text-btn-submit">
               決済画面へ
             </div>

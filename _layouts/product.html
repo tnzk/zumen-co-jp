@@ -11,12 +11,14 @@
     <a class="text-md ml-3 text-black" href="/">ZUMEN</a>
     <button class="burger mr-2 pr-1 ml-auto"></button>
   </nav>
-  <div class="container-fluid production">
-    <div class="row">
-      {{content}}
+  <div class="product-wrapper">
+    <div class="container-fluid production">
+      <div class="row">
+        {{content}}
+      </div>
     </div>
+    {% include product_footer.html %}
   </div>
-  {% include product_footer.html %}
 </body>
 
 </html>
