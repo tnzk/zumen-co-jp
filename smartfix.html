@@ -59,7 +59,7 @@ title: スマート模型修正依頼 | 株式会社ZUMEN
           <div class="text-form">
             メールアドレス(※当該データ注文時のメールアドレス)
           </div>
-          <input name="メールアドレス" type="email" class="form-control expand" data-formrun-type="email" data-formrun-required>
+          <input id="emailaddress" name="メールアドレス" type="email" class="form-control expand" data-formrun-type="email" data-formrun-required>
           <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="メールアドレス"><span class="error-message">メールアドレスを入力してください。</span></div>
         </div>
         <div class="col-12">
@@ -100,7 +100,7 @@ title: スマート模型修正依頼 | 株式会社ZUMEN
           </div>
         </div>
         <div class="form-check col-12 text-center">
-          <input name="利用規約への同意" type="checkbox" class="form-check-input mt-2" id="agree" data-formrun-required>
+          <input id="agree" name="利用規約への同意" type="checkbox" class="form-check-input mt-2" id="agree" data-formrun-required>
           <label class="text-form ml-3" for="agree">同意する</label>
           <div style="margin-top: -5px" data-formrun-show-if-error="利用規約への同意"><span class="error-message">利用規約をよくお読みの上、同意してください。</span></div>
         </div>
@@ -111,7 +111,7 @@ title: スマート模型修正依頼 | 株式会社ZUMEN
           <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
         </div>
         <div class="mini-box mt-sm-2 mb-sm-4">
-          <button type="submit button" class="btn-submit button-action">
+          <button id="form-submit" type="submit button" class="btn-submit button-action">
             <div class="text-btn-submit">
               決済画面へ
             </div>
@@ -173,12 +173,31 @@ title: スマート模型修正依頼 | 株式会社ZUMEN
   </div>
 </div>
 <script>
-  console.warn(location.href.slice(-6))
   if (location.href.slice(-6) === 'thanks') {
     $('#thanksModal').modal('show')
   } else if (location.href.slice(-6) === 'cancel') {
     $('#cancelAlert').show()
   }
+  $('#emailaddress').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
+  $('#agree').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
+  function decorateSubmitButton() {
+    if ($('#emailaddress').val().length < 1) {
+      $('#form-submit').css('opacity', '0.3')
+      return
+    }
+    if ($('#agree').prop('checked') == false) {
+      $('#form-submit').css('opacity', '0.3')
+      return
+    }
+      $('#form-submit').css('opacity', '1')
+  }
+  decorateSubmitButton()
 </script>
 
 <script src="https://sdk.form.run/js/v2/formrun.js"></script>

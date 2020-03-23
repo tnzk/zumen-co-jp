@@ -193,9 +193,6 @@ span.collapse:not(.show) {
 body.product {
   font-family: "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", -apple-system, BlinkMacSystemFont, sans-serif;
 }
-form {
-  font-family: "游ゴシック体", YuGothic, "Yu Gothic M", "游ゴシック Medium", "Yu Gothic Medium", -apple-system, BlinkMacSystemFont, sans-serif;
-}
 .faq-row {
   width: 100%;
 }

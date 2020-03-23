@@ -258,45 +258,45 @@ title: スマート模型 | 株式会社ZUMEN
             意匠図PDF
           </div>
           <label for="file_zip" class="upload-form">
-            <input name="意匠図" type="file" id="file_zip" class="upload-form-input" data-formrun-required>
+            <input id="file_zip" name="意匠図" type="file" class="upload-form-input" data-formrun-required>
           </label>
           <div id="clear" class="file-info-wrapper">
             <div>
               <div class="file-info-element">
-                <div id="file_info">あああ</div>
+                <div id="file_info"></div>
                 <button id="clear-button" class="clear-button">+</button>
               </div>
             </div>
           </div>
-          <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="意匠図"><span class="error-message">意匠図を添付してください。</span></div>
+          <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="意匠図"><span class="error-message">意匠図PDF(圧縮ファイル)を添付してください。</span></div>
         </div>
         <div class="col-12 col-md-6 row ml-0">
           <div class="pl-1 pr-3 col-7 col-md-6 d-flex flex-column">
             <div class="text-form">
               郵便番号
             </div>
-            <input name="郵便番号" type="text" class="form-control expand" data-formrun-required data-formrun-class-if-error="has-danger">
+            <input id="postal_code" name="郵便番号" type="text" class="form-control expand" data-formrun-required data-formrun-class-if-error="has-danger">
             <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="郵便番号"><span class="error-message">郵便番号を入力してください。</span></div>
           </div>
           <div class="pl-1 pr-1 col-7 col-md-6 d-flex flex-column">
             <div class="text-form">
               都道府県
             </div>
-            <input name="都道府県" type="text" class="form-control expand" data-formrun-required data-formrun-class-if-error="has-danger">
+            <input id="address1" name="都道府県" type="text" class="form-control expand" data-formrun-required data-formrun-class-if-error="has-danger">
             <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="都道府県"><span class="error-message">都道府県を入力してください。</span></div>
           </div>
           <div class="px-1 col-12 d-flex flex-column">
             <div class="text-form">
               市町村区以降の住所(番地含む)
             </div>
-            <input name="住所" type="text" class="form-control expand" data-formrun-required data-formrun-class-if-error="has-danger">
+            <input id="address2" name="住所" type="text" class="form-control expand" data-formrun-required data-formrun-class-if-error="has-danger">
             <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="住所"><span class="error-message">市町村区以降の住所を入力してください。</span></div>
           </div>
           <div class="px-1 col-12 d-flex flex-column">
             <div class="text-form">
               メールアドレス（※決済画面でも同じメールアドレスを入力してください）
             </div>
-            <input name="メールアドレス" type="email" class="form-control expand mb-2" data-formrun-type="email" data-formrun-required data-formrun-class-if-error="has-danger">
+            <input id="emailaddress" name="メールアドレス" type="email" class="form-control expand mb-2" data-formrun-type="email" data-formrun-required data-formrun-class-if-error="has-danger">
             <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="メールアドレス"><span class="error-message">メールアドレスを入力してください。</span></div>
           </div>
         </div>
@@ -340,7 +340,7 @@ title: スマート模型 | 株式会社ZUMEN
           </div>
         </div>
         <div class="form-check col-12 text-center">
-          <input name="利用規約への同意" type="checkbox" class="form-check-input mt-2" id="agree" data-formrun-required>
+          <input id="agree" name="利用規約への同意" type="checkbox" class="form-check-input mt-2" id="agree" data-formrun-required>
           <label class="text-form ml-3" for="agree">同意する</label>
           <div style="margin-top: -5px" data-formrun-show-if-error="利用規約への同意"><span class="error-message">利用規約をよくお読みの上、同意してください。</span></div>
         </div>
@@ -351,7 +351,7 @@ title: スマート模型 | 株式会社ZUMEN
           <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
         </div>
         <div class="mini-box mt-sm-2 mb-sm-4">
-          <button type="submit button" class="btn-submit button-action">
+          <button id="form-submit" type="submit button" class="btn-submit button-action">
             <div class="text-btn-submit">
               決済画面へ
             </div>
@@ -431,20 +431,66 @@ title: スマート模型 | 株式会社ZUMEN
   } else if (location.href.slice(-6) === 'cancel') {
     $('#cancelAlert').show()
   }
+  $('#clear-button').click(function() {
+    $("#file_zip").val('')
+    $('#clear').hide();
+  });
   $('#file_zip').on('change', function (e) {
     if (e.target.files[0]) {
       $('#clear').show();
       $("#file_info").html(e.target.files[0].name);
     }
+    decorateSubmitButton()
   });
-  $('#clear-button').click(function() {
-    $("#file_zip").val('')
-    $('#clear').hide();
-  });
+
+  $('#postal_code').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
+  $('#address1').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
+  $('#address2').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
+  $('#emailaddress').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
+  $('#agree').on('change', function (e) {
+    decorateSubmitButton()
+  })
 
   function decorateSubmitButton() {
-
+    if ($('#file_zip').val().length < 1) {
+      $('#form-submit').css('opacity', '0.3')
+      return
+    }
+    if ($('#postal_code').val().length < 1) {
+      $('#form-submit').css('opacity', '0.3')
+      return
+    }
+    if ($('#address1').val().length < 1) {
+      $('#form-submit').css('opacity', '0.3')
+      return
+    }
+    if ($('#address2').val().length < 1) {
+      $('#form-submit').css('opacity', '0.3')
+      return
+    }
+    if ($('#emailaddress').val().length < 1) {
+      $('#form-submit').css('opacity', '0.3')
+      return
+    }
+    if ($('#agree').prop('checked') == false) {
+      $('#form-submit').css('opacity', '0.3')
+      return
+    }
+      $('#form-submit').css('opacity', '1')
   }
+  decorateSubmitButton()
 </script>
 
 <script src="https://sdk.form.run/js/v2/formrun.js"></script>
