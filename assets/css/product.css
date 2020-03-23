@@ -223,7 +223,7 @@ span.collapse:not(.show) {
 }
 
 .plus .collapse .multi-collapse .show:after {
-  transition-duration: 0;
+  transition-duration: 0 !important;
   transform: initial;
 }
 
@@ -313,7 +313,7 @@ body.product {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 10vw;
+  padding: 40px 0;
 }
 
 .faq-box {
