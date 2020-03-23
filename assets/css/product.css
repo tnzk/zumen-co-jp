@@ -96,7 +96,6 @@ button:focus {
   margin-top: 2em;
   list-style: none;
   margin-left: 0;
-  /* font-size: 17px; */
 }
 
 .footer-nav li>a {
@@ -106,7 +105,6 @@ button:focus {
 .footer-nav li>a:hover {
   text-decoration: none;
   color: #FAEA5B;
-  /* opacity: 0.5; */
 }
 
 footer.product {
@@ -447,7 +445,6 @@ hr.hr-bold-black {
   font-size: 14px;
   font-weight: bold;
   line-height: 175%;
-  font-family: Roboto;
 }
 
 .text-center {

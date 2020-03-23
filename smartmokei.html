@@ -33,7 +33,7 @@ title: スマート模型 | 株式会社ZUMEN
   <hr class="hr-bold-blue">
   <div class="inner-box">
     <div class="text-md">
-      模型作成・パース作成・施主プレゼンにかかっていた時間を削減します。<br/>
+      模型作成・パース作成・施主プレゼンにかかっていた時間を削減します。<br />
       <u>必要なものは、「<span class="font-weight-bold">意匠図のPDF</span>」と「<span class="font-weight-bold">建設予定地の入力</span>」だけ</u>です。
     </div>
   </div>
@@ -295,7 +295,7 @@ title: スマート模型 | 株式会社ZUMEN
           </div>
           <div class="px-1 col-12 d-flex flex-column">
             <div class="text-form">
-              メールアドレス（※決済画面でも同じメールアドレスを入力してください）
+              お申し込みメールアドレス
             </div>
             <input id="emailaddress" name="メールアドレス" type="email" class="form-control expand mb-2" data-formrun-type="email" data-formrun-required data-formrun-class-if-error="has-danger">
             <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="メールアドレス"><span class="error-message">メールアドレスを入力してください。</span></div>
@@ -347,7 +347,14 @@ title: スマート模型 | 株式会社ZUMEN
         </div>
         <!-- ボット投稿をブロックするためのタグ -->
         <div class="_formrun_gotcha">
-          <style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
+          <style media="screen">
+            ._formrun_gotcha {
+              position: absolute !important;
+              height: 1px;
+              width: 1px;
+              overflow: hidden;
+            }
+          </style>
           <label for="_formrun_gotcha">If you are a human, ignore this field</label>
           <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
         </div>
@@ -432,7 +439,7 @@ title: スマート模型 | 株式会社ZUMEN
   } else if (location.href.slice(-6) === 'cancel') {
     $('#cancelAlert').show()
   }
-  $('#clear-button').click(function() {
+  $('#clear-button').click(function () {
     $("#file_zip").val('')
     $('#clear').hide();
   });
@@ -489,7 +496,7 @@ title: スマート模型 | 株式会社ZUMEN
       $('#form-submit').css('opacity', '0.3')
       return
     }
-      $('#form-submit').css('opacity', '1')
+    $('#form-submit').css('opacity', '1')
   }
   decorateSubmitButton()
 </script>
