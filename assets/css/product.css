@@ -250,13 +250,11 @@ body.product {
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 400px;
   height: 100%;
 }
 
 @media (max-width: 575.98px) {
   .card {
-    width: 350px;
     height: 100%;
   }
 }
@@ -270,11 +268,11 @@ body.product {
 }
 
 .card-text {
-  padding: 5%;
+  padding: 1em;
 }
 
 .card-text h3 {
-  padding-bottom: 5%;
+  padding-bottom: .5em;
 }
 
 .bg-gray {
