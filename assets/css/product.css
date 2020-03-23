@@ -43,9 +43,10 @@ body.product>nav>button.burger {
 
 .file-info-wrapper>div {
   display: inline-block;
-  padding: 2px 5px !important;
+  padding: 5px 1em !important;
+  margin: .5em 0;
   font-size: 13px;
-  border-radius: 10px;
+  border-radius: 50px;
   background-color: #F4F4F4;
 }
 
