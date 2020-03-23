@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="ja">
 {% include product_head.html %}
-  <link
-    rel="stylesheet"
-    href="{{ '/assets/css/product.css' | relative_url }}"
-  />
+<link rel="stylesheet" href="{{ '/assets/css/product.css' | relative_url }}" />
 </head>
 <body class="product">
-  <nav class="navbar navbar-expand-lg">
-    <a class="text-md ml-3 text-black" href="/">ZUMEN</a>
-    <button class="burger mr-2 pr-1 ml-auto"></button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand logo" href="/smartmokei.html">ZUMEN</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#smart-form">スマート模型を注文</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#pricing">利用料金</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#faq">よくあるご質問</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/smartfix.html">修正依頼</a>
+        </li>
+      </ul>
+    </div>
   </nav>
   <div class="product-wrapper">
     <div class="container-fluid production">
