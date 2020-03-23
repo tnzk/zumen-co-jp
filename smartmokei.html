@@ -258,7 +258,7 @@ title: スマート模型 | 株式会社ZUMEN
             意匠図PDF
           </div>
           <label for="file_zip" class="upload-form">
-            <input id="file_zip" name="意匠図" type="file" class="upload-form-input" data-formrun-required>
+            <input id="file_zip" accept="application/zip" name="意匠図" type="file" class="upload-form-input" data-formrun-required>
           </label>
           <div id="clear" class="file-info-wrapper">
             <div>
@@ -436,7 +436,7 @@ title: スマート模型 | 株式会社ZUMEN
     $('#clear').hide();
   });
   $('#file_zip').on('change', function (e) {
-    if (e.target.files[0]) {
+    if (e.target.files[0] && e.target.files[0].name.slice(-4) === '.zip') {
       $('#clear').show();
       $("#file_info").html(e.target.files[0].name);
     }
