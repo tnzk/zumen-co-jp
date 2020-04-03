@@ -24,13 +24,13 @@ html {
   z-index: 10;
 }
 
-.alert-box>.alert {
+.alert-box > .alert {
   display: flex;
   align-items: center;
   height: 50px;
 }
 
-.alert>.close {
+.alert > .close {
   top: 10px !important;
 }
 
@@ -38,7 +38,7 @@ html {
   display: none;
 }
 
-.file-info-wrapper>div {
+.file-info-wrapper > div {
   display: inline-block;
   padding: 5px 1em !important;
   margin: 0.5em 0;
@@ -96,11 +96,11 @@ button:focus {
   margin-left: 0;
 }
 
-.footer-nav li>a {
+.footer-nav li > a {
   color: #fff;
 }
 
-.footer-nav li>a:hover {
+.footer-nav li > a:hover {
   text-decoration: none;
   color: #faea5b;
 }
@@ -127,7 +127,7 @@ footer.product {
   }
 }
 
-footer.product>* {
+footer.product > * {
   padding: 1rem 0;
   position: relative;
   z-index: 1;
@@ -235,7 +235,7 @@ footer.product>* {
 
 .terms-text p,
 .regal p {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .underline {
@@ -249,7 +249,7 @@ footer.product>* {
   font-weight: bold;
 }
 
-.terms-text p+h5 {
+.terms-text p + h5 {
   margin-top: 1.5em;
 }
 
@@ -257,11 +257,17 @@ span.collapse:not(.show) {
   transition-duration: 0;
   display: block !important;
   transform: rotate(-45deg) translateX(-0.8px) translateY(-0.8px);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .plus .collapse .multi-collapse .show:after {
   transition-duration: 0 !important;
   transform: initial;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 body.product {
@@ -290,8 +296,17 @@ body.product {
   border: none;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
-
+.card-y {
+  background: #fff;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+  overflow: hidden;
+}
 @media (max-width: 575.98px) {
   .card {
     height: 100%;
@@ -299,16 +314,26 @@ body.product {
 }
 
 .card-img {
-  border-radius: 4px 4px 0 0;
-
-  transform: translateY(-2px);
-  -ms-transform: translateY(-2px);
-  -moz-transform: translateY(-2px);
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
 }
-
+.card-img.img-1 {
+  background: url("../img/product/smartmokei/card-house.svg");
+  background-size: cover;
+  background-position: center center;
+}
+.card-img.img-2 {
+  background: url("../img/product/smartmokei/card-discussion.svg");
+  background-size: cover;
+  background-position: center center;
+}
 .card-text {
   padding: 1.5em 2em;
   color: #555;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-text h3 {
@@ -329,6 +354,8 @@ body.product {
 
 .bg-darkgray {
   background: #e8e8e8;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .height-icon {
@@ -356,10 +383,10 @@ body.product {
 
 .container-fuild.top::before {
   background: #f0f5fa;
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
-  height: 460px;
+  height: 850px;
   top: 0;
   left: 0;
   right: 0;
@@ -505,7 +532,7 @@ hr.hr-bold-black {
   color: #007ea7;
 }
 
-#thanksModal>div>div.modal-round {
+#thanksModal > div > div.modal-round {
   border-radius: 10px !important;
 }
 
@@ -628,8 +655,6 @@ h2.black {
   max-width: 503px;
 }
 
-
-
 .btn-use {
   overflow: hidden;
   display: flex;
@@ -644,15 +669,13 @@ h2.black {
   font-weight: bold;
   white-space: nowrap;
   margin-top: 0;
-
 }
 
 .btn-use p,
 .btn-use i {
-  margin: auto .5em;
+  margin: auto 0.5em;
   align-items: center;
   font-size: 20px;
-
 }
 
 .btn-box {
@@ -672,7 +695,6 @@ h2.black {
 .btn-box a:hover {
   background: #fff;
 }
-
 
 .btn-submit {
   flex-wrap: nowrap;
@@ -889,10 +911,8 @@ nav {
   font-family: sans-serif;
 }
 
-
 .text-10 {
   font-size: 12px !important;
-
 }
 
 .house {
@@ -928,11 +948,46 @@ nav {
   margin: 3em 0;
 }
 
-.regal .table>div+div,
-.regal .table>div:first-child {
-  margin: .8em 0;
+.regal .table > div + div,
+.regal .table > div:first-child {
+  margin: 0.8em 0;
 }
 
 .regal .table .col-sm-3 {
   font-weight: bold;
+}
+
+#smart-form {
+  position: relative;
+}
+#smart-form:before {
+  background: #f0f5fa;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 240px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: -1;
+}
+
+@media (max-width: 575.98px) {
+  #smart-form:before {
+    height: 160px;
+  }
+}
+
+.center {
+  margin: auto;
+  text-align: center;
+}
+input[type="checkbox"],
+label {
+  height: 1em;
+  vertical-align: middle;
+}
+input[type="checkbox"] {
+  background: #fff;
 }
