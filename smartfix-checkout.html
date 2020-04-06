@@ -1,18 +1,29 @@
-<script src="https://js.stripe.com/v3"></script>
-<div id="error-message"></div>
-<script>
-(function() {
-  var stripe = Stripe('pk_test_Z8QA5lWF1kdejOQuOxBoptuM00f9Fk1cii');
-  stripe.redirectToCheckout({
-    items: [{sku: 'sku_GwCJHlDcdZ4ceC', quantity: 1}],
-    successUrl: 'https://www.zumen.co.jp/smartfix.html#thanks',
-    cancelUrl: 'https://www.zumen.co.jp/smartfix.html#cancel',
-  })
-  .then(function (result) {
-    if (result.error) {
-      var displayError = document.getElementById('error-message');
-      displayError.textContent = result.error.message;
-    }
-  });
-})();
-</script>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スマート模型修正依頼 | 株式会社ZUMEN</title>
+</head>
+
+<body>
+  <script src="https://js.stripe.com/v3"></script>
+  <div id="error-message"></div>
+  <script>
+  (function() {
+    var stripe = Stripe('pk_test_Z8QA5lWF1kdejOQuOxBoptuM00f9Fk1cii');
+    stripe.redirectToCheckout({
+      items: [{sku: 'sku_GwCJHlDcdZ4ceC', quantity: 1}],
+      successUrl: 'https://www.zumen.co.jp/smartfix.html#thanks',
+      cancelUrl: 'https://www.zumen.co.jp/smartfix.html#cancel',
+    })
+    .then(function (result) {
+      if (result.error) {
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
