@@ -51,14 +51,63 @@ title: スマート模型修正依頼 | 株式会社ZUMEN
       をご入力ください。<br>
       7営業日内に、担当より折返しご連絡いたします。
     </div>
-    <form class="formrun" action="https://form.run/api/v1/r/vt3wp4ubeg06v0ph6ny3zymd" method="post">
+    <form class="formrun h-adr" action="https://form.run/api/v1/r/vt3wp4ubeg06v0ph6ny3zymd" method="post" enctype="multipart/form-data">
       <div class="row px-1 px-md-5">
-        <div class="col-12 col-md-7">
+        <input type="hidden" class="p-country-name" value="Japan">
+        <div class="col-12 col-md-6 d-flex flex-column">
           <div class="text-form">
-            メールアドレス(※当該データ注文時のメールアドレス)
+            意匠図PDF
           </div>
-          <input id="emailaddress" name="メールアドレス" type="email" class="form-control expand" data-formrun-type="email" data-formrun-required>
-          <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="メールアドレス"><span class="error-message">メールアドレスを入力してください。</span></div>
+          <label for="file_zip" class="upload-form">
+            <input id="file_zip" accept="application/zip" name="意匠図" type="file" class="upload-form-input">
+          </label>
+          <div id="clear" class="file-info-wrapper">
+            <div>
+              <div class="file-info-element">
+                <div id="file_info"></div>
+                <button id="clear-button" class="clear-button">+</button>
+              </div>
+            </div>
+          </div>
+          <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="意匠図"><span class="error-message">意匠図PDF(圧縮ファイル)を添付してください。</span></div>
+        </div>
+        <div class="col-12 col-md-6 row ml-0">
+          <div class="pl-1 pr-3 col-7 col-md-6 d-flex flex-column">
+            <div class="text-form">
+              郵便番号
+            </div>
+            <input id="postal_code" name="郵便番号" type="text" class="form-control expand p-postal-code" data-formrun-class-if-error="has-danger">
+            <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="郵便番号"><span class="error-message">郵便番号を入力してください。</span></div>
+          </div>
+          <div class="pl-1 pr-1 col-7 col-md-6 d-flex flex-column">
+            <div class="text-form">
+              都道府県
+            </div>
+            <input id="address1" name="都道府県" type="text" class="form-control expand p-region" data-formrun-class-if-error="has-danger">
+            <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="都道府県"><span class="error-message">都道府県を入力してください。</span></div>
+          </div>
+          <div class="px-1 col-12 d-flex flex-column">
+            <div class="text-form">
+              市町村区以降の住所(番地含む)
+            </div>
+            <input id="address2" name="住所" type="text" class="form-control expand p-locality p-street-address p-extended-address" data-formrun-class-if-error="has-danger">
+            <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="住所"><span class="error-message">市町村区以降の住所を入力してください。</span></div>
+          </div>
+          <div class="px-1 col-12 d-flex flex-column">
+            <div class="text-form">
+              メールアドレス(※当該データ注文時のメールアドレス)
+            </div>
+            <input id="emailaddress" name="メールアドレス" type="email" class="form-control expand mb-2" data-formrun-type="email" data-formrun-required data-formrun-class-if-error="has-danger">
+            <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="メールアドレス"><span class="error-message">メールアドレスを入力してください。</span></div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="px-1 px-sm-0">
+            <div class="text-form">
+              詳細
+            </div>
+            <textarea id="detail" name="詳細" rows="5" class="form-control expand mb-2" data-formrun-class-if-error="has-danger"></textarea>
+          </div>
         </div>
         <div class="col-12">
           <div class="terms">
@@ -277,6 +326,30 @@ title: スマート模型修正依頼 | 株式会社ZUMEN
   } else if (location.href.slice(-6) === 'cancel') {
     $('#cancelAlert').show()
   }
+  $('#clear-button').click(function () {
+    $("#file_zip").val('')
+    $('#clear').hide();
+  });
+  $('#file_zip').on('change', function (e) {
+    if (e.target.files[0] && e.target.files[0].name.slice(-4) === '.zip') {
+      $('#clear').show();
+      $("#file_info").html(e.target.files[0].name);
+    }
+    decorateSubmitButton()
+  });
+
+  $('#postal_code').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
+  $('#address1').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
+  $('#address2').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
   $('#emailaddress').on('change', function (e) {
     decorateSubmitButton()
   })
@@ -300,3 +373,4 @@ title: スマート模型修正依頼 | 株式会社ZUMEN
 </script>
 
 <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
