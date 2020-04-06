@@ -252,18 +252,16 @@ footer.product > * {
 .terms-text p + h5 {
   margin-top: 1.5em;
 }
-
-span.collapse:not(.show) {
-  transition-duration: 0;
+.faq-row[aria-expanded="true"] .plus {
   display: block !important;
   transform: rotate(-45deg) translateX(-0.8px) translateY(-0.8px);
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
-.plus .collapse .multi-collapse .show:after {
-  transition-duration: 0 !important;
-  transform: initial;
+.faq-row[aria-expanded="false"] .plus {
+  display: block !important;
+
   -webkit-transform: scale(1);
   transform: scale(1);
   -webkit-transition: 0.2s ease-in-out;
@@ -419,8 +417,9 @@ body.product {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 0 0;
-  margin: 0 auto;
+  margin: 60px auto;
+  cursor: pointer;
+  cursor: hand;
 }
 
 @media (max-width: 575.98px) {
