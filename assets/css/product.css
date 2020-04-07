@@ -743,8 +743,15 @@ h2.black {
   height: 70px;
 
   background: #faea5b;
+  border-radius: 3px;
 }
+.btn-submit.send {
+  font-size: 16px;
+  padding: 0 2em;
 
+  border-radius: 25px;
+  /* background: #66cdaa; */
+}
 .btn-white {
   flex-wrap: nowrap;
   display: flex;
@@ -759,6 +766,28 @@ h2.black {
   background: #ffffff;
   border: 2px solid #000000;
   box-sizing: border-box;
+  transition: 0.4s;
+}
+.btn-white:hover {
+  background: #faea5b;
+}
+.btn-white i.fa-arrow-right,
+.hover-blue i.fa-arrow-right {
+  color: #000;
+  transition: 0.2s;
+}
+.btn-white.hover-blue:hover {
+  border: none;
+  border-radius: 50px;
+}
+.hover-blue:hover .text-btn-white,
+.hover-blue:hover i.fa-arrow-right {
+  transition: 0.2s;
+  color: #fff !important;
+}
+.hover-blue:hover {
+  transition: 0.4s;
+  background-color: #5da5c4;
 }
 
 .btn-white-big {
@@ -842,6 +871,19 @@ h2.black {
   color: black !important;
 }
 
+.btn-submit.send {
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+  height: 3em;
+  background: #faea5b;
+  border-radius: 50px;
+}
+.text-btn-submit.send {
+  font-size: 16px;
+}
 .btn-use:hover {
   text-decoration: none;
 }
@@ -1020,9 +1062,17 @@ nav {
 }
 input[type="checkbox"],
 label {
-  height: 1em;
   vertical-align: middle;
 }
 input[type="checkbox"] {
   background: #fff;
+}
+label {
+  margin-bottom: 0;
+}
+a.contact-agree {
+  color: #007ea7;
+}
+.form-check.send {
+  margin-left: 1rem !important;
 }

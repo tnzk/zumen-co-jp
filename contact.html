@@ -1,0 +1,106 @@
+---
+layout: product
+title: スマート模型修正依頼 | 株式会社ZUMEN
+---
+<div class="col-12 mb-5">
+  <div class="regal align-items-center container">
+    <h1>お問い合わせ</h1>
+    <!-- class, action, methodを変更しないでください -->
+    <div class="row px-1 px-md-5 mb-5">
+      <div class="col-12">
+        <p>サービスに関するご相談、ご質問など、些細なことでもお気軽にお問い合わせください。3営業日以内を目安にご案内致します。</p>
+        <p class="text-xs mb-4">※ 3営業日以上ご返信がない場合は、お手数ですが再度ご連絡くださいますようお願い申し上げます。</p>
+        <p>営業日：平日(土日祝を除く) 10:00〜19:00</p>
+      </div>
+    </div>
+    <form class="formrun" action="https://form.run/api/v1/r/5l9exiqageleo5yc9afrufat" method="post">
+
+      <div class="row px-1 px-md-5">
+        <div class="col-12 col-md-8 row ml-0">
+          <div class="text-form">
+            メールアドレス
+          </div>
+          <input id="emailaddress" name="メールアドレス" type="email" class="form-control expand mb-2" data-formrun-type="email" data-formrun-required data-formrun-class-if-error="has-danger">
+          <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="メールアドレス"><span class="error-message">メールアドレスを入力してください。</span>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="px-1 px-sm-0">
+            <div class="text-form">
+              お問い合わせ内容
+            </div>
+            <textarea id="detail" name="お問い合わせ内容" rows="5" class="form-control expand mb-2" data-formrun-class-if-error="has-danger" data-formrun-required></textarea>
+            <div style="margin: -5px 0 0 5px;" data-formrun-show-if-error="お問い合わせ内容"><span class="error-message">お問い合わせ内容を入力してください。</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-check col-12 center send">
+          <input id="agree" name="プライバシーポリシーへの同意" type="checkbox" class="form-check-input mt-2" id="agree" data-formrun-required>
+          <label class="text-form ml-1" for="agree">
+            <a href="/privacypolicy.html" target="_blank" class="contact-agree">プライバシーポリシー</a>に同意する</label>
+          <div style="margin-top: -5px" data-formrun-show-if-error="利用規約への同意"><span class="error-message">プライバシーポリシーをご確認の上、同意してください。</span></div>
+        </div>
+        <!-- ボット投稿をブロックするためのタグ -->
+        <div class="_formrun_gotcha">
+          <style media="screen">
+            ._formrun_gotcha {
+              position: absolute !important;
+              height: 1px;
+              width: 1px;
+              overflow: hidden;
+            }
+          </style>
+          <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+          <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+        </div>
+        <div class="mini-box m-4">
+          <button id="form-submit" type="submit button" class="btn-submit button-action send">
+            <div class="text-btn-submit send">
+              お問い合わせ送信
+            </div>
+          </button>
+        </div>
+        <div class="text-xs px-3 mini-box mx-2 pb-2">
+          ※当社は、本件秘密情報を本件業務の遂行に必要最小限度の当社の役員または関係従業員にのみ開示し、書面による貴社の事前の承諾なくしては、その他の第三者に開示または漏洩しません。当社は、本件秘密情報を知得する当社の役員または関係従業員（本件秘密情報知得後の退職者を含みます。）の行為をすべて当社の行為とみなし、当該利用者に対し、一切の責を負います。
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  $('#postal_code').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
+  $('#address1').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
+  $('#address2').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
+  $('#emailaddress').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
+  $('#agree').on('change', function (e) {
+    decorateSubmitButton()
+  })
+
+  function decorateSubmitButton() {
+    if ($('#emailaddress').val().length < 1) {
+      $('#form-submit').css('opacity', '0.3')
+      return
+    }
+    if ($('#agree').prop('checked') == false) {
+      $('#form-submit').css('opacity', '0.3')
+      return
+    }
+    $('#form-submit').css('opacity', '1')
+  }
+  decorateSubmitButton()
+</script>
+<script src="https://sdk.form.run/js/v2/formrun.js"></script>
